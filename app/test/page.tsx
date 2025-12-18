@@ -6,8 +6,8 @@ import Link from 'next/link';
 export default function TestIndexPage() {
   const testPages = [
     {
-      href: '/test/animations',
-      title: 'Animation Tests',
+      href: '/test/basics',
+      title: 'Basics',
       description:
         'Comprehensive testing page for all animation components including easing functions, FadeIn, ScaleIn, RotateIn, and Stagger animations.',
       color: 'from-purple-600 to-pink-600',
@@ -18,6 +18,13 @@ export default function TestIndexPage() {
       description:
         'Test different hero section variants including standard, mesh gradient, and spotlight effects.',
       color: 'from-blue-600 to-cyan-600',
+    },
+    {
+      href: '/test/text',
+      title: 'Text Animations',
+      description:
+        'Test different text animations including TextReveal, CharacterReveal, and Typewriter.',
+      color: 'from-green-600 to-teal-600',
     },
   ];
 
