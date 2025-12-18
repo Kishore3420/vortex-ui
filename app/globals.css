@@ -1,26 +1,110 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Light Theme Colors */
+  --color-background: #ffffff;
+  --color-foreground: #0a0a0a;
+  --color-card: #ffffff;
+  --color-card-foreground: #0a0a0a;
+  --color-primary: #9333ea;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #ec4899;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #f3f4f6;
+  --color-muted-foreground: #6b7280;
+  --color-accent: #f3f4f6;
+  --color-accent-foreground: #0a0a0a;
+  --color-border: #e5e7eb;
+  --color-input: #e5e7eb;
+  --color-ring: #9333ea;
+
+  /* Dark Theme Colors (will be overridden by data-theme) */
+  --color-background-dark: #0a0a0a;
+  --color-foreground-dark: #fafafa;
+  --color-card-dark: #1a1a1a;
+  --color-card-foreground-dark: #fafafa;
+  --color-primary-dark: #9333ea;
+  --color-primary-foreground-dark: #ffffff;
+  --color-secondary-dark: #ec4899;
+  --color-secondary-foreground-dark: #ffffff;
+  --color-muted-dark: #262626;
+  --color-muted-foreground-dark: #a3a3a3;
+  --color-accent-dark: #262626;
+  --color-accent-foreground-dark: #fafafa;
+  --color-border-dark: #404040;
+  --color-input-dark: #404040;
+  --color-ring-dark: #9333ea;
+
+  /* Custom gradients */
+  --gradient-primary: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --gradient-card: linear-gradient(
+    to bottom right,
+    rgba(147, 51, 234, 0.1),
+    rgba(236, 72, 153, 0.1)
+  );
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark theme overrides */
+[data-theme='dark'] {
+  --color-background: var(--color-background-dark);
+  --color-foreground: var(--color-foreground-dark);
+  --color-card: var(--color-card-dark);
+  --color-card-foreground: var(--color-card-foreground-dark);
+  --color-primary: var(--color-primary-dark);
+  --color-primary-foreground: var(--color-primary-foreground-dark);
+  --color-secondary: var(--color-secondary-dark);
+  --color-secondary-foreground: var(--color-secondary-foreground-dark);
+  --color-muted: var(--color-muted-dark);
+  --color-muted-foreground: var(--color-muted-foreground-dark);
+  --color-accent: var(--color-accent-dark);
+  --color-accent-foreground: var(--color-accent-foreground-dark);
+  --color-border: var(--color-border-dark);
+  --color-input: var(--color-input-dark);
+  --color-ring: var(--color-ring-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base styles */
+* {
+  @apply border-border;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-primary/20 text-foreground;
 }
