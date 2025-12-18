@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Studio Animation Library
 
-## Getting Started
+A comprehensive, production-ready animation library for modern React and Next.js applications. Built with Framer Motion, GSAP, and Three.js, featuring a professional Pantone-based color system.
 
-First, run the development server:
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📚 Documentation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Comprehensive documentation is available in the [`docs/`](./docs/) directory:
 
-## Learn More
+- **[Introduction](./docs/01-introduction.md)** - Overview and philosophy
+- **[Getting Started](./docs/02-getting-started.md)** - Installation and setup
+- **[Quick Start](./docs/03-quick-start.md)** - Your first animation
+- **[Roadmap](./docs/00-roadmap.md)** - Development plan
+- **[Library Structure](./docs/00-structure.md)** - Project organization
+- **[Component Library](./docs/components/README.md)** - All components
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🎨 **Multi-Library Support** - Framer Motion, GSAP, Three.js
+- 🎯 **Production Ready** - Optimized, accessible, performant
+- 🎨 **Professional Design** - Pantone-based color system
+- 📱 **Modern Stack** - React 19, Next.js 16, TypeScript 5
+- 📖 **Comprehensive Docs** - Detailed guides and examples
+- ♿ **Accessible** - Respects `prefers-reduced-motion`
+- ⚡ **Performance** - 60fps target, GPU-accelerated
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Project Structure
 
-## Deploy on Vercel
+```
+├── components/
+│   ├── animations/     # Animation components
+│   ├── providers/      # Context providers
+│   └── sections/       # Page sections
+├── lib/
+│   ├── animations/     # Animation utilities
+│   ├── hooks/          # Custom hooks
+│   └── theme.ts        # Pantone colors
+├── docs/               # Documentation
+└── app/                # Next.js app
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Current Status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Phase 1: Foundation** ✅
+- Basic Framer Motion components
+- Theme system
+- Smooth scrolling
+- Documentation structure
+
+**Phase 2: Expansion** 🚧
+- More Framer Motion components
+- GSAP integration
+- Three.js integration
+
+See [Roadmap](./docs/00-roadmap.md) for full development plan.
+
+## 📖 Learn More
+
+- [Documentation](./docs/README.md) - Complete documentation
+- [Examples](./docs/examples/README.md) - Code examples
+- [Component Library](./docs/components/README.md) - All components
+- [Best Practices](./docs/07-performance.md) - Performance guide
+
+## 🤝 Contributing
+
+Contributions are welcome! See [Contributing Guide](./docs/contributing.md) for details.
+
+## 📄 License
+
+[Add your license here]
+
+---
+
+**Built with:** Next.js 16, React 19, TypeScript, Framer Motion, GSAP, Three.js

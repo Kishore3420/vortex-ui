@@ -1,4 +1,4 @@
-import { FadeIn } from '@/components/animations/FadeIn';
+import { FadeIn } from '@/components/animations';
 
 export function CTASection() {
   return (

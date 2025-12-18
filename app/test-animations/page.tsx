@@ -1,14 +1,16 @@
-import { FadeIn } from '@/components/animations/FadeIn';
-import { RotateIn } from '@/components/animations/RotateIn';
-import { ScaleIn } from '@/components/animations/ScaleIn';
-import { StaggerContainer } from '@/components/animations/StaggerContainer';
-import { StaggerItem } from '@/components/animations/StaggerItem';
+import {
+  FadeIn,
+  RotateIn,
+  ScaleIn,
+  StaggerContainer,
+  StaggerItem,
+} from '@/components/animations';
 
 export default function TestAnimationsPage() {
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-6xl mx-auto space-y-32">
-        {/* Section 1: Easing Functions Comparison */}
+        {/* Section 1: Easing Functions <Compari></Compari>son */}
         <section className="space-y-8">
           <div>
             <h1 className="text-4xl font-bold mb-4">
@@ -472,13 +474,13 @@ export default function TestAnimationsPage() {
           {/* Grid of rotating cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <RotateIn direction="clockwise" angle={90} delay={0}>
-              <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl aspect-square flex items-center justify-center">
+              <div className="bg-linear-to-br from-purple-600 to-pink-600 p-6 rounded-xl aspect-square flex items-center justify-center">
                 <span className="text-2xl font-bold">Card 1</span>
               </div>
             </RotateIn>
 
             <RotateIn direction="counterclockwise" angle={90} delay={0.1}>
-              <div className="bg-gradient-to-br from-blue-600 to-cyan-600 p-6 rounded-xl aspect-square flex items-center justify-center">
+              <div className="bg-linear-to-br from-blue-600 to-cyan-600 p-6 rounded-xl aspect-square flex items-center justify-center">
                 <span className="text-2xl font-bold">Card 2</span>
               </div>
             </RotateIn>
@@ -489,7 +491,7 @@ export default function TestAnimationsPage() {
               delay={0.2}
               easing="bounce"
             >
-              <div className="bg-gradient-to-br from-green-600 to-emerald-600 p-6 rounded-xl aspect-square flex items-center justify-center">
+              <div className="bg-linear-to-br from-green-600 to-emerald-600 p-6 rounded-xl aspect-square flex items-center justify-center">
                 <span className="text-2xl font-bold">Card 3</span>
               </div>
             </RotateIn>
@@ -654,7 +656,7 @@ export default function TestAnimationsPage() {
                     easing="spring"
                     animationType="tween"
                   >
-                    <div className="bg-gradient-to-br from-pink-600 to-rose-600 p-8 rounded-xl aspect-square flex items-center justify-center">
+                    <div className="bg-linear-to-br from-pink-600 to-rose-600 p-8 rounded-xl aspect-square flex items-center justify-center">
                       <span className="text-2xl font-bold">Card {num}</span>
                     </div>
                   </StaggerItem>

@@ -1,5 +1,4 @@
-import { FadeIn } from '@/components/animations/FadeIn';
-import { ScaleIn } from '@/components/animations/ScaleIn';
+import { FadeIn, ScaleIn } from '@/components/animations';
 
 const stats = [
   { number: '150+', label: 'Projects Completed' },

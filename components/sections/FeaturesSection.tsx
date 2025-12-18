@@ -1,6 +1,4 @@
-import { FadeIn } from '@/components/animations/FadeIn';
-import { StaggerContainer } from '@/components/animations/StaggerContainer';
-import { StaggerItem } from '@/components/animations/StaggerItem';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/animations';
 
 const features = [
   {
