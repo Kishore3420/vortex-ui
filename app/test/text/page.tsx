@@ -2,270 +2,489 @@
 
 import {
   CharacterReveal,
-  FadeIn,
   SlideUpText,
   TextReveal,
   Typewriter,
 } from '@/components/animations';
 
-export default function TextTestPage() {
+export default function TestTextPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-32">
-        <FadeIn direction="up">
-          <header className="space-y-4">
-            <h1 className="text-4xl font-bold">Text Animation Test Suite</h1>
-            <p className="text-muted-foreground text-lg">
-              Comprehensive testing environment for all text animation
-              components. Scroll down to explore different text animations
-              including TextReveal, CharacterReveal, SlideUpText, and
-              Typewriter.
-            </p>
-          </header>
-        </FadeIn>
-
-        {/* TextReveal Section */}
-        <section className="space-y-8">
-          <FadeIn direction="up" delay={0.1}>
-            <div>
-              <h2 className="text-3xl font-bold mb-4">TextReveal</h2>
-              <p className="text-muted-foreground mb-8">
-                Animates text one word at a time with a fade and slide-up effect.
-                Each word appears sequentially with spring physics.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="space-y-12">
-            <FadeIn direction="up" delay={0.2}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Default TextReveal
-                </h3>
-                <div className="text-2xl font-bold">
-                  <TextReveal text="Welcome to the future of web animations" />
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.3}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Fast Stagger (0.08s)
-                </h3>
-                <div className="text-2xl font-bold">
-                  <TextReveal
-                    text="Quick reveal with fast stagger timing"
-                    staggerDelay={0.08}
-                  />
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.4}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Slow Stagger (0.2s)
-                </h3>
-                <div className="text-2xl font-bold">
-                  <TextReveal
-                    text="Dramatic slow reveal with deliberate timing"
-                    staggerDelay={0.2}
-                  />
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.5}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  With Initial Delay
-                </h3>
-                <div className="text-2xl font-bold">
-                  <TextReveal
-                    text="This text waits 0.5 seconds before starting"
-                    delay={0.5}
-                  />
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.6}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">Styled Text</h3>
-                <div>
-                  <TextReveal
-                    text="Beautiful animated text with custom styling"
-                    className="text-4xl font-bold bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
-                  />
-                </div>
-              </div>
-            </FadeIn>
+    <div className="min-h-screen bg-black text-white p-8">
+      <div className="max-w-6xl mx-auto space-y-32">
+        {/* TextReveal - Basic */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <TextReveal
+              text="This text reveals word by word"
+              className="text-6xl font-bold"
+              delay={0.5}
+            />
           </div>
         </section>
 
-        {/* CharacterReveal Section */}
-        <section className="space-y-8">
-          <FadeIn direction="up" delay={0.1}>
-            <div>
-              <h2 className="text-3xl font-bold mb-4">CharacterReveal</h2>
-              <p className="text-muted-foreground mb-8">
-                Animates text one character at a time with 3D rotation effect.
-                Each character flips into view.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="space-y-12">
-            <FadeIn direction="up" delay={0.2}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Default CharacterReveal
-                </h3>
-                <div className="text-3xl font-bold">
-                  <CharacterReveal text="Character by Character" />
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.3}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Fast Character Reveal
-                </h3>
-                <div className="text-2xl font-bold">
-                  <CharacterReveal
-                    text="Quick character animation"
-                    staggerDelay={0.02}
-                  />
-                </div>
-              </div>
-            </FadeIn>
+        {/* TextReveal - Fast Stagger */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <TextReveal
+              text="Fast stagger reveals words quickly"
+              className="text-5xl font-bold text-purple-400"
+              delay={0.3}
+              staggerDelay={0.08}
+            />
           </div>
         </section>
 
-        {/* SlideUpText Section */}
-        <section className="space-y-8">
-          <FadeIn direction="up" delay={0.1}>
-            <div>
-              <h2 className="text-3xl font-bold mb-4">SlideUpText</h2>
-              <p className="text-muted-foreground mb-8">
-                Slides entire text block up from below. Clean and simple
-                reveal.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="space-y-12">
-            <FadeIn direction="up" delay={0.2}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Default SlideUpText
-                </h3>
-                <div className="text-3xl font-bold">
-                  <SlideUpText>Slides up smoothly</SlideUpText>
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.3}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Multiple Lines with Delay
-                </h3>
-                <div className="space-y-4">
-                  <SlideUpText delay={0}>
-                    <div className="text-2xl font-bold">First line</div>
-                  </SlideUpText>
-                  <SlideUpText delay={0.2}>
-                    <div className="text-2xl font-bold">Second line</div>
-                  </SlideUpText>
-                  <SlideUpText delay={0.4}>
-                    <div className="text-2xl font-bold">Third line</div>
-                  </SlideUpText>
-                </div>
-              </div>
-            </FadeIn>
+        {/* TextReveal - Slow Stagger */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <TextReveal
+              text="Slow dramatic reveal with deliberate timing"
+              className="text-5xl font-bold text-blue-400"
+              delay={0.4}
+              staggerDelay={0.2}
+            />
           </div>
         </section>
 
-        {/* Typewriter Section */}
-        <section className="space-y-8">
-          <FadeIn direction="up" delay={0.1}>
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Typewriter</h2>
-              <p className="text-muted-foreground mb-8">
-                Classic typing effect with blinking cursor. Characters appear
-                one by one as if being typed.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="space-y-12">
-            <FadeIn direction="up" delay={0.2}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Default Typewriter
-                </h3>
-                <div className="text-2xl font-mono">
-                  <Typewriter text="Typing effect with cursor..." />
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.3}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">Fast Typing</h3>
-                <div className="text-xl font-mono">
-                  <Typewriter text="Fast typing speed" speed={30} />
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.4}>
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">Slow Typing</h3>
-                <div className="text-xl font-mono">
-                  <Typewriter text="Slow, deliberate typing" speed={100} />
-                </div>
-              </div>
-            </FadeIn>
+        {/* TextReveal - Long Text */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center max-w-4xl">
+            <TextReveal
+              text="This is a longer sentence that demonstrates how TextReveal handles multiple words in a paragraph format"
+              className="text-3xl font-semibold text-gray-300"
+              delay={0.2}
+              staggerDelay={0.1}
+            />
           </div>
         </section>
 
-        {/* Combined Example */}
-        <section className="space-y-8">
-          <FadeIn direction="up" delay={0.1}>
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Combined Example</h2>
-              <p className="text-muted-foreground mb-8">
-                Combining multiple text animations for a complete hero section
-                effect.
-              </p>
-            </div>
-          </FadeIn>
+        {/* TextReveal - Gradient Text */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <TextReveal
+              text="Beautiful gradient text animation"
+              className="text-7xl font-bold bg-linear-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
+              delay={0.3}
+            />
+          </div>
+        </section>
 
-          <FadeIn direction="up" delay={0.2}>
-            <div className="bg-linear-to-br from-purple-600 to-pink-600 rounded-lg p-12 text-center space-y-6">
-              <div className="text-5xl font-bold text-white">
-                <TextReveal text="Welcome to VortexUI" delay={0.2} />
-              </div>
-              <div className="text-xl text-white/90">
-                <TextReveal
-                  text="The most comprehensive animation library for React"
-                  delay={0.8}
-                  staggerDelay={0.1}
-                />
-              </div>
-              <div className="text-lg text-white/80 font-mono pt-4">
-                <Typewriter
-                  text="Start building amazing animations today"
-                  delay={1.5}
-                  speed={50}
-                />
-              </div>
+        {/* TextReveal - Small Text */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <TextReveal
+              text="Small subtle animation"
+              className="text-2xl font-normal text-gray-400"
+              delay={0.1}
+              staggerDelay={0.15}
+            />
+          </div>
+        </section>
+
+        {/* CharacterReveal - Basic */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <CharacterReveal
+              text="Character Animation"
+              className="text-7xl font-bold bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
+              delay={0.5}
+            />
+          </div>
+        </section>
+
+        {/* CharacterReveal - Fast */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <CharacterReveal
+              text="Fast Character Reveal"
+              className="text-6xl font-bold text-cyan-400"
+              delay={0.3}
+              staggerDelay={0.02}
+            />
+          </div>
+        </section>
+
+        {/* CharacterReveal - Slow */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <CharacterReveal
+              text="Slow Character Reveal"
+              className="text-6xl font-bold text-yellow-400"
+              delay={0.4}
+              staggerDelay={0.05}
+            />
+          </div>
+        </section>
+
+        {/* CharacterReveal - Short Phrase */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <CharacterReveal
+              text="Hello"
+              className="text-8xl font-bold text-green-400"
+              delay={0.2}
+            />
+          </div>
+        </section>
+
+        {/* CharacterReveal - Brand Name */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <CharacterReveal
+              text="VortexUI"
+              className="text-9xl font-black bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              delay={0.3}
+              staggerDelay={0.03}
+            />
+          </div>
+        </section>
+
+        {/* CharacterReveal - With Numbers */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <CharacterReveal
+              text="2025"
+              className="text-8xl font-bold text-orange-400"
+              delay={0.2}
+            />
+          </div>
+        </section>
+
+        {/* SlideUpText - Single Line */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <SlideUpText delay={0.2} className="text-6xl font-bold">
+              Slide Up Animation
+            </SlideUpText>
+          </div>
+        </section>
+
+        {/* SlideUpText - Multiple Lines */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center space-y-4">
+            <SlideUpText delay={0.2} className="text-6xl font-bold">
+              Slide Up
+            </SlideUpText>
+            <SlideUpText delay={0.4} className="text-6xl font-bold">
+              Line by Line
+            </SlideUpText>
+            <SlideUpText delay={0.6} className="text-6xl font-bold">
+              Animation
+            </SlideUpText>
+          </div>
+        </section>
+
+        {/* SlideUpText - Fast Duration */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <SlideUpText
+              delay={0.1}
+              duration={0.5}
+              className="text-5xl font-bold text-purple-400"
+            >
+              Fast Slide Up
+            </SlideUpText>
+          </div>
+        </section>
+
+        {/* SlideUpText - Slow Duration */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <SlideUpText
+              delay={0.2}
+              duration={1.2}
+              className="text-5xl font-bold text-blue-400"
+            >
+              Slow Dramatic Slide
+            </SlideUpText>
+          </div>
+        </section>
+
+        {/* SlideUpText - Hero Style */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center space-y-6">
+            <SlideUpText delay={0} className="text-8xl font-black">
+              Welcome
+            </SlideUpText>
+            <SlideUpText
+              delay={0.3}
+              className="text-4xl font-light text-gray-400"
+            >
+              To the Future
+            </SlideUpText>
+            <SlideUpText delay={0.6} className="text-xl text-gray-500">
+              Experience next-generation animations
+            </SlideUpText>
+          </div>
+        </section>
+
+        {/* SlideUpText - Gradient */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <SlideUpText
+              delay={0.2}
+              className="text-7xl font-bold bg-linear-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent"
+            >
+              Gradient Slide
+            </SlideUpText>
+          </div>
+        </section>
+
+        {/* Typewriter - Basic */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <Typewriter
+              text="Classic typewriter effect with cursor..."
+              delay={0.5}
+              speed={80}
+              className="text-5xl font-mono"
+            />
+          </div>
+        </section>
+
+        {/* Typewriter - Fast */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <Typewriter
+              text="Fast typing speed"
+              delay={0.3}
+              speed={30}
+              className="text-4xl font-mono text-green-400"
+            />
+          </div>
+        </section>
+
+        {/* Typewriter - Slow */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <Typewriter
+              text="Slow deliberate typing"
+              delay={0.4}
+              speed={120}
+              className="text-4xl font-mono text-yellow-400"
+            />
+          </div>
+        </section>
+
+        {/* Typewriter - Code Style */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <Typewriter
+              text="const hello = 'world';"
+              delay={0.2}
+              speed={60}
+              className="text-3xl font-mono text-cyan-400"
+            />
+          </div>
+        </section>
+
+        {/* Typewriter - Terminal Style */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <Typewriter
+              text="$ npm install vortex-ui"
+              delay={0.3}
+              speed={70}
+              className="text-4xl font-mono text-green-400"
+            />
+          </div>
+        </section>
+
+        {/* Typewriter - Without Cursor */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <Typewriter
+              text="No cursor animation"
+              delay={0.2}
+              speed={50}
+              showCursor={false}
+              className="text-4xl font-mono text-purple-400"
+            />
+          </div>
+        </section>
+
+        {/* Typewriter - Custom Cursor */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <Typewriter
+              text="Custom cursor character"
+              delay={0.3}
+              speed={60}
+              cursorChar="_"
+              className="text-4xl font-mono text-blue-400"
+            />
+          </div>
+        </section>
+
+        {/* Typewriter - Long Text */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center max-w-4xl">
+            <Typewriter
+              text="This is a longer typewriter text that demonstrates how the component handles extended content with multiple words and sentences."
+              delay={0.4}
+              speed={40}
+              className="text-2xl font-mono text-gray-300"
+            />
+          </div>
+        </section>
+
+        {/* Combined - Hero Section */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center space-y-8">
+            <TextReveal
+              text="Welcome to VortexUI"
+              className="text-7xl font-black bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+              delay={0.2}
+              staggerDelay={0.15}
+            />
+            <SlideUpText
+              delay={0.8}
+              className="text-2xl font-light text-gray-400"
+            >
+              The most comprehensive animation library
+            </SlideUpText>
+            <Typewriter
+              text="Start building amazing animations today"
+              delay={1.2}
+              speed={50}
+              className="text-xl font-mono text-gray-500"
+            />
+          </div>
+        </section>
+
+        {/* Combined - Feature Showcase */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center space-y-6">
+            <CharacterReveal
+              text="Features"
+              className="text-6xl font-bold text-purple-400"
+              delay={0.2}
+            />
+            <div className="space-y-4 mt-8">
+              <TextReveal
+                text="Word by word reveals"
+                className="text-3xl font-semibold"
+                delay={0.6}
+              />
+              <TextReveal
+                text="Character animations"
+                className="text-3xl font-semibold"
+                delay={0.8}
+              />
+              <TextReveal
+                text="Slide up effects"
+                className="text-3xl font-semibold"
+                delay={1.0}
+              />
+              <TextReveal
+                text="Typewriter effects"
+                className="text-3xl font-semibold"
+                delay={1.2}
+              />
             </div>
-          </FadeIn>
+          </div>
+        </section>
+
+        {/* Combined - Staggered Different Types */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center space-y-8">
+            <SlideUpText delay={0} className="text-5xl font-bold">
+              Multiple
+            </SlideUpText>
+            <CharacterReveal
+              text="Animation"
+              className="text-5xl font-bold text-cyan-400"
+              delay={0.4}
+            />
+            <TextReveal
+              text="Types Together"
+              className="text-5xl font-bold text-pink-400"
+              delay={0.8}
+            />
+            <Typewriter
+              text="Creating amazing experiences"
+              delay={1.2}
+              speed={60}
+              className="text-2xl font-mono text-gray-400"
+            />
+          </div>
+        </section>
+
+        {/* TextReveal - Different Sizes */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center space-y-6">
+            <TextReveal
+              text="Extra Large"
+              className="text-9xl font-black"
+              delay={0}
+            />
+            <TextReveal
+              text="Large Heading"
+              className="text-6xl font-bold"
+              delay={0.3}
+            />
+            <TextReveal
+              text="Medium Text"
+              className="text-4xl font-semibold"
+              delay={0.6}
+            />
+            <TextReveal
+              text="Small Text"
+              className="text-2xl font-normal"
+              delay={0.9}
+            />
+          </div>
+        </section>
+
+        {/* CharacterReveal - Different Styles */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center space-y-8">
+            <CharacterReveal
+              text="BOLD"
+              className="text-8xl font-black text-red-400"
+              delay={0.2}
+            />
+            <CharacterReveal
+              text="Regular"
+              className="text-6xl font-normal text-blue-400"
+              delay={0.5}
+            />
+            <CharacterReveal
+              text="Light"
+              className="text-5xl font-light text-green-400"
+              delay={0.8}
+            />
+          </div>
+        </section>
+
+        {/* Typewriter - Different Speeds Comparison */}
+        <section className="min-h-screen flex items-center justify-center">
+          <div className="text-center space-y-6">
+            <Typewriter
+              text="Very Fast (30ms)"
+              delay={0}
+              speed={30}
+              className="text-3xl font-mono text-green-400"
+            />
+            <Typewriter
+              text="Fast (50ms)"
+              delay={1.5}
+              speed={50}
+              className="text-3xl font-mono text-blue-400"
+            />
+            <Typewriter
+              text="Medium (80ms)"
+              delay={3}
+              speed={80}
+              className="text-3xl font-mono text-purple-400"
+            />
+            <Typewriter
+              text="Slow (120ms)"
+              delay={4.5}
+              speed={120}
+              className="text-3xl font-mono text-yellow-400"
+            />
+          </div>
         </section>
       </div>
     </div>
