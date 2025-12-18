@@ -174,7 +174,7 @@ export default function Home() {
                 Explore all available animation components
               </p>
               <a
-                href="/docs/components/framer-motion"
+                href="/docs/components"
                 className="text-sm text-primary hover:underline"
               >
                 View Components →

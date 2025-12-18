@@ -4,6 +4,14 @@ import { FadeIn } from '@/components/animations';
 import Link from 'next/link';
 
 export default function ComponentsOverviewPage() {
+  const framerMotionComponents = [
+    { href: '/docs/animations/fade-in', label: 'Fade In' },
+    { href: '/docs/animations/scale-in', label: 'Scale In' },
+    { href: '/docs/animations/rotate-in', label: 'Rotate In' },
+    { href: '/docs/animations/stagger', label: 'Stagger Container' },
+    { href: '/docs/animations/stagger-item', label: 'Stagger Item' },
+  ];
+
   return (
     <div className="space-y-12">
       <FadeIn direction="up">
@@ -12,63 +20,68 @@ export default function ComponentsOverviewPage() {
             Component Library
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            Browse all available animation components organized by library. Each
-            component includes detailed documentation, examples, and usage
-            guides.
+            Browse all available animation components. Each component includes
+            detailed documentation, examples, and usage guides.
           </p>
         </header>
       </FadeIn>
 
-      <div className="grid gap-6 md:grid-cols-3">
-        <FadeIn direction="up" delay={0.1}>
-          <Link
-            href="/docs/components/framer-motion"
-            className="block rounded-lg border border-border bg-card p-6 hover:border-primary/50 transition-all hover:shadow-lg"
-          >
-            <h2 className="text-xl font-semibold mb-2">Framer Motion</h2>
-            <p className="text-sm text-muted-foreground mb-4">
-              Declarative, React-friendly animations perfect for most use cases.
-            </p>
-            <div className="space-y-1">
-              <div className="text-sm font-medium">Available Components:</div>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• FadeIn</li>
-                <li>• ScaleIn</li>
-                <li>• RotateIn</li>
-                <li>• StaggerContainer</li>
-                <li>• StaggerItem</li>
-              </ul>
-            </div>
-            <div className="mt-4 text-sm text-primary font-medium">
-              View Components →
-            </div>
-          </Link>
-        </FadeIn>
-
-        <FadeIn direction="up" delay={0.2}>
-          <div className="rounded-lg border border-border bg-card p-6 opacity-60">
-            <h2 className="text-xl font-semibold mb-2">GSAP</h2>
-            <p className="text-sm text-muted-foreground mb-4">
-              Powerful timeline-based animations for complex sequences.
-            </p>
-            <p className="text-sm text-muted-foreground italic">
-              Coming in Phase 3...
-            </p>
+      <FadeIn direction="up" delay={0.1}>
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold">Framer Motion Components</h2>
+          <p className="text-muted-foreground">
+            Declarative, React-friendly animations perfect for most use cases.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {framerMotionComponents.map((component, index) => (
+              <FadeIn
+                key={component.href}
+                direction="up"
+                delay={0.1 + index * 0.05}
+              >
+                <Link
+                  href={component.href}
+                  className="block rounded-lg border border-border bg-card p-5 hover:border-primary/50 transition-all hover:shadow-lg"
+                >
+                  <h3 className="font-semibold mb-2">{component.label}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    View detailed documentation, examples, and usage guides.
+                  </p>
+                  <span className="text-sm text-primary font-medium">
+                    View Component →
+                  </span>
+                </Link>
+              </FadeIn>
+            ))}
           </div>
-        </FadeIn>
+        </section>
+      </FadeIn>
 
-        <FadeIn direction="up" delay={0.3}>
-          <div className="rounded-lg border border-border bg-card p-6 opacity-60">
-            <h2 className="text-xl font-semibold mb-2">Three.js</h2>
-            <p className="text-sm text-muted-foreground mb-4">
-              3D animations and WebGL effects.
-            </p>
-            <p className="text-sm text-muted-foreground italic">
-              Coming in Phase 4...
-            </p>
+      <FadeIn direction="up" delay={0.3}>
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold">Coming Soon</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-lg border border-border bg-card p-6 opacity-60">
+              <h3 className="text-xl font-semibold mb-2">GSAP</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Powerful timeline-based animations for complex sequences.
+              </p>
+              <p className="text-sm text-muted-foreground italic">
+                Coming in Phase 3...
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-6 opacity-60">
+              <h3 className="text-xl font-semibold mb-2">Three.js</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                3D animations and WebGL effects.
+              </p>
+              <p className="text-sm text-muted-foreground italic">
+                Coming in Phase 4...
+              </p>
+            </div>
           </div>
-        </FadeIn>
-      </div>
+        </section>
+      </FadeIn>
 
       <FadeIn direction="up" delay={0.4}>
         <section className="space-y-4">

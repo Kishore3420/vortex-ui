@@ -6,7 +6,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <div className="flex min-h-screen">
         <DocsSidebar />
-        <main className="flex-1 flex flex-col">
+        <main className="flex-1 flex flex-col md:ml-64">
           <header className="md:hidden border-b border-border px-4 py-3">
             <h1 className="text-base font-semibold">
               AI Studio Animation Docs
