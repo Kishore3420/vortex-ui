@@ -8,6 +8,8 @@ interface StaggerContainerProps {
   staggerDelay?: number;
   initialDelay?: number;
   className?: string;
+  viewportMargin?: string;
+  once?: boolean;
 }
 
 export const StaggerContainer = ({
@@ -15,6 +17,8 @@ export const StaggerContainer = ({
   staggerDelay = 0.1,
   initialDelay = 0,
   className = '',
+  viewportMargin = '-100px',
+  once = true,
 }: StaggerContainerProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -32,7 +36,10 @@ export const StaggerContainer = ({
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-100px' }}
+      viewport={{
+        once,
+        margin: viewportMargin,
+      }}
       className={className}
     >
       {children}

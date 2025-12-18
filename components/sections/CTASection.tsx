@@ -17,7 +17,7 @@ export function CTASection() {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.6}>
-          <button className="bg-linear-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground px-10 sm:px-12 py-4 sm:py-5 rounded-full text-lg sm:text-xl font-semibold transition-all transform hover:scale-105 shadow-lg shadow-primary/20">
+          <button className="bg-linear-to-r from-primary to-[#3282B8] hover:from-primary/90 hover:to-[#3282B8]/90 text-primary-foreground px-10 sm:px-12 py-4 sm:py-5 rounded-lg text-lg sm:text-xl font-semibold transition-all transform hover:scale-105 shadow-lg shadow-primary/25">
             Start Your Project
           </button>
         </FadeIn>

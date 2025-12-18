@@ -51,7 +51,7 @@ export function FeaturesSection() {
         >
           {features.map((feature) => (
             <StaggerItem key={feature.title}>
-              <div className="bg-card border border-border p-6 sm:p-8 rounded-2xl hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 group">
+              <div className="bg-card border border-border p-6 sm:p-8 rounded-xl hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 group">
                 <div className="text-4xl sm:text-5xl mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>

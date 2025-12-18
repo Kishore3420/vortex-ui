@@ -19,41 +19,69 @@ const easingPresets: Record<
   custom: [0.25, 0.4, 0.25, 1],
 };
 
-interface ScaleInProps {
+interface RotateInProps {
   children: ReactNode;
+  direction?: 'clockwise' | 'counterclockwise' | 'both';
+  angle?: number;
   delay?: number;
   duration?: number;
-  scale?: number;
   className?: string;
   easing?: EasingPreset | Easing | [number, number, number, number] | string;
   withFade?: boolean;
-  transformOrigin?: string;
+  withScale?: boolean;
+  scale?: number;
 }
 
-export const ScaleIn = ({
+export const RotateIn = ({
   children,
+  direction = 'clockwise',
+  angle = 180,
   delay = 0,
-  duration = 0.5,
-  scale = 0.8,
+  duration = 0.6,
   className = '',
-  easing = 'bounce',
+  easing = 'easeOut',
   withFade = true,
-  transformOrigin = 'center',
-}: ScaleInProps) => {
-  const initial: Record<string, number> = {
-    scale,
+  withScale = false,
+  scale = 0.8,
+}: RotateInProps) => {
+  const getInitialRotation = () => {
+    const baseAngle = angle;
+    switch (direction) {
+      case 'clockwise':
+        return baseAngle;
+      case 'counterclockwise':
+        return -baseAngle;
+      case 'both':
+        return baseAngle;
+      default:
+        return baseAngle;
+    }
+  };
+
+  const initialRotation = getInitialRotation();
+
+  const initial: Record<string, number | string> = {
+    rotate: initialRotation,
   };
 
   if (withFade) {
     initial.opacity = 0;
   }
 
+  if (withScale) {
+    initial.scale = scale;
+  }
+
   const animate: Record<string, number> = {
-    scale: 1,
+    rotate: 0,
   };
 
   if (withFade) {
     animate.opacity = 1;
+  }
+
+  if (withScale) {
+    animate.scale = 1;
   }
 
   const resolvedEasing: Easing | [number, number, number, number] = (() => {
@@ -69,7 +97,7 @@ export const ScaleIn = ({
       whileInView={animate}
       viewport={{
         once: true,
-        margin: '-50px',
+        margin: '-100px',
       }}
       transition={{
         duration,
@@ -78,7 +106,7 @@ export const ScaleIn = ({
       }}
       className={className}
       style={{
-        transformOrigin,
+        transformOrigin: 'center',
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-import { SmoothScroll } from '@/components/animations/SmoothScroll';
+import { SmoothScroll } from '@/components/providers/SmoothScroll';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import type { Metadata } from 'next';

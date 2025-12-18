@@ -5,7 +5,7 @@ export function HeroSection() {
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl text-center">
         <FadeIn direction="up" delay={0.2}>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-linear-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-linear-to-r from-primary via-[#3282B8] to-primary bg-clip-text text-transparent animate-gradient">
             AI Studio Portfolio
           </h1>
         </FadeIn>
@@ -17,7 +17,7 @@ export function HeroSection() {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.6}>
-          <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-primary/20">
+          <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-primary/25">
             Explore Work
           </button>
         </FadeIn>
