@@ -23,8 +23,22 @@ export default function GettingStartedPage() {
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-semibold mb-2">Prerequisites</h3>
+              <p className="text-muted-foreground mb-2">
+                This project uses <strong>Bun</strong> as the package manager.
+                Please install Bun before proceeding.
+              </p>
               <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                <li>Node.js 18+ or Bun</li>
+                <li>
+                  <a
+                    href="https://bun.sh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    Bun
+                  </a>{' '}
+                  (recommended)
+                </li>
                 <li>React 19+</li>
                 <li>Next.js 16+</li>
               </ul>
@@ -34,16 +48,10 @@ export default function GettingStartedPage() {
                 Install Dependencies
               </h3>
               <CodeBlock
-                code={`# Using npm
-npm install framer-motion gsap lenis
+                code={`# Install dependencies with Bun
+bun install
 
-# Using yarn
-yarn add framer-motion gsap lenis
-
-# Using pnpm
-pnpm add framer-motion gsap lenis
-
-# Using bun
+# Or install specific packages
 bun add framer-motion gsap lenis`}
               />
             </div>
@@ -52,7 +60,7 @@ bun add framer-motion gsap lenis`}
                 Optional: Three.js (for 3D animations)
               </h3>
               <CodeBlock
-                code={`npm install @react-three/fiber @react-three/drei three`}
+                code={`bun add @react-three/fiber @react-three/drei three`}
               />
             </div>
           </div>

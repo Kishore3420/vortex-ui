@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AI Studio Animation Library provides a comprehensive collection of animation components organized by library and use case.
+VortexUI provides a comprehensive collection of animation components organized by library and use case.
 
 ## Library Organization
 

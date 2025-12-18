@@ -9,7 +9,7 @@ export default function DocsHomePage() {
       <FadeIn direction="up">
         <header className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">
-            Welcome to AI Studio Animation Library
+            Welcome to VortexUI
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
             A comprehensive, production-ready animation library for modern React

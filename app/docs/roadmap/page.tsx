@@ -12,15 +12,17 @@ export default function RoadmapPage() {
         'Project structure and setup',
         'Theme system (light/dark mode)',
         'Smooth scroll integration',
-        'Basic animations (FadeIn, ScaleIn, RotateIn)',
-        'Staggered animations',
+        'Basic animations (FadeIn, ScaleIn, RotateIn, BlurIn, FlipIn)',
+        'Staggered animations (Container, Item, Diagonal)',
         'Documentation structure',
+        'Component documentation pages',
       ],
     },
     {
       title: 'Phase 2: Framer Motion Expansion',
       status: 'in-progress',
-      description: 'Expand Framer Motion component library with advanced animations',
+      description:
+        'Expand Framer Motion component library with advanced animations',
       items: [
         'Parallax scrolling effects',
         'Hover animations and interactions',
@@ -28,6 +30,7 @@ export default function RoadmapPage() {
         'Text reveal animations',
         'Page transition effects',
         'Advanced stagger patterns',
+        'Motion blur effects (directional blur with movement)',
       ],
     },
     {
@@ -136,12 +139,14 @@ export default function RoadmapPage() {
                           getStatusColor(phase.status),
                         ].join(' ')}
                       >
-                        <span className="mr-1">{getStatusIcon(phase.status)}</span>
+                        <span className="mr-1">
+                          {getStatusIcon(phase.status)}
+                        </span>
                         {phase.status === 'in-progress'
                           ? 'In Progress'
                           : phase.status === 'completed'
-                            ? 'Completed'
-                            : 'Planned'}
+                          ? 'Completed'
+                          : 'Planned'}
                       </span>
                     </div>
                     <p className="text-muted-foreground">{phase.description}</p>
@@ -174,9 +179,10 @@ export default function RoadmapPage() {
         <section className="rounded-lg border border-border bg-card p-6 space-y-4">
           <h2 className="text-xl font-bold">Current Focus</h2>
           <p className="text-muted-foreground">
-            We&apos;re currently working on <strong>Phase 2: Framer Motion Expansion</strong>.
-            This includes documenting all existing animations and adding advanced
-            interaction patterns. Stay tuned for updates!
+            We&apos;re currently working on{' '}
+            <strong>Phase 2: Framer Motion Expansion</strong>. This includes
+            documenting all existing animations and adding advanced interaction
+            patterns. Stay tuned for updates!
           </p>
         </section>
       </FadeIn>

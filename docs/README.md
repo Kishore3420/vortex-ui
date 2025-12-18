@@ -1,6 +1,6 @@
-# AI Studio Animation Library Documentation
+# VortexUI Documentation
 
-Welcome to the comprehensive documentation for the AI Studio Animation Library - a modern, production-ready animation library for React and Next.js applications.
+Welcome to the comprehensive documentation for VortexUI - a modern, production-ready animation library for React and Next.js applications.
 
 ## 📚 Documentation Structure
 

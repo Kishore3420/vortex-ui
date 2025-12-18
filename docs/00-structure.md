@@ -2,10 +2,10 @@
 
 ## 📁 Project Organization
 
-This document outlines the structure of the AI Studio Animation Library, inspired by best practices from popular animation libraries like Framer Motion, GSAP, and React Spring.
+This document outlines the structure of VortexUI, inspired by best practices from popular animation libraries like Framer Motion, GSAP, and React Spring.
 
 ```
-ai-studio-portfolio/
+vortex-ui/
 ├── app/                          # Next.js App Router
 │   ├── page.tsx                 # Main landing page
 │   ├── layout.tsx               # Root layout

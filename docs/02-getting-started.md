@@ -37,8 +37,8 @@ npm install @react-three/fiber @react-three/drei three
 ```bash
 # If using this project as a template
 git clone [your-repo]
-cd ai-studio-portfolio
-npm install
+cd vortex-ui
+bun install
 ```
 
 ### 2. Configure TypeScript

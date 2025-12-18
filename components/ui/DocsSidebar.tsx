@@ -19,6 +19,8 @@ const sections = [
       { href: '/docs/animations/fade-in', label: 'Fade In' },
       { href: '/docs/animations/scale-in', label: 'Scale In' },
       { href: '/docs/animations/rotate-in', label: 'Rotate In' },
+      { href: '/docs/animations/blur-in', label: 'Blur In' },
+      { href: '/docs/animations/flip-in', label: 'Flip In' },
     ],
   },
   {
@@ -114,7 +116,7 @@ export function DocsSidebar() {
       <div className="px-4 py-6 border-b border-border shrink-0">
         <Link href="/docs" className="block">
           <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-            AI Studio
+            VortexUI
           </span>
           <p className="text-lg font-semibold">Animation Docs</p>
         </Link>

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains real-world code examples demonstrating how to use the AI Studio Animation Library.
+This directory contains real-world code examples demonstrating how to use VortexUI.
 
 ## Example Categories
 

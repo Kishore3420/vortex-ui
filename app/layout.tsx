@@ -8,8 +8,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AI Studio Portfolio',
-  description: 'Modern portfolio with advanced animations',
+  title: 'VortexUI - Animation Library',
+  description: 'A comprehensive, production-ready animation library for modern React and Next.js applications',
 };
 
 export default function RootLayout({

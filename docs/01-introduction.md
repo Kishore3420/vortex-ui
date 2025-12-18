@@ -1,8 +1,8 @@
 # Introduction
 
-## Welcome to AI Studio Animation Library
+## Welcome to VortexUI
 
-The AI Studio Animation Library is a comprehensive, production-ready animation library for modern React and Next.js applications. Built with the latest web technologies, it provides developers with everything needed to create stunning, performant animations.
+VortexUI is a comprehensive, production-ready animation library for modern React and Next.js applications. Built with the latest web technologies, it provides developers with everything needed to create stunning, performant animations.
 
 ## 🎯 Why This Library?
 

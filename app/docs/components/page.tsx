@@ -8,6 +8,8 @@ export default function ComponentsOverviewPage() {
     { href: '/docs/animations/fade-in', label: 'Fade In' },
     { href: '/docs/animations/scale-in', label: 'Scale In' },
     { href: '/docs/animations/rotate-in', label: 'Rotate In' },
+    { href: '/docs/animations/blur-in', label: 'Blur In' },
+    { href: '/docs/animations/flip-in', label: 'Flip In' },
     { href: '/docs/animations/stagger', label: 'Stagger Container' },
     { href: '/docs/animations/stagger-item', label: 'Stagger Item' },
   ];

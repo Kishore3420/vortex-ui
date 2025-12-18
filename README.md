@@ -1,29 +1,30 @@
-# AI Studio Animation Library
+# VortexUI
 
 A comprehensive, production-ready animation library for modern React and Next.js applications. Built with Framer Motion, GSAP, and Three.js, featuring a professional Pantone-based color system.
 
 ## 🚀 Quick Start
 
+**Prerequisites:** This project uses [Bun](https://bun.sh). Install Bun if you haven't already.
+
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Run development server
-npm run dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see the result.
 
 ## 📚 Documentation
 
-Comprehensive documentation is available in the [`docs/`](./docs/) directory:
+Comprehensive documentation is available at `/docs`:
 
-- **[Introduction](./docs/01-introduction.md)** - Overview and philosophy
-- **[Getting Started](./docs/02-getting-started.md)** - Installation and setup
-- **[Quick Start](./docs/03-quick-start.md)** - Your first animation
-- **[Roadmap](./docs/00-roadmap.md)** - Development plan
-- **[Library Structure](./docs/00-structure.md)** - Project organization
-- **[Component Library](./docs/components/README.md)** - All components
+- **[Documentation Home](./app/docs)** - Overview and getting started
+- **[Getting Started](./app/docs/getting-started)** - Installation and setup
+- **[Quick Start](./app/docs/quick-start)** - Your first animation
+- **[Roadmap](./app/docs/roadmap)** - Development plan and phases
+- **[Component Library](./app/docs/components)** - All animation components
 
 ## ✨ Features
 
@@ -53,12 +54,14 @@ Comprehensive documentation is available in the [`docs/`](./docs/) directory:
 ## 🎯 Current Status
 
 **Phase 1: Foundation** ✅
+
 - Basic Framer Motion components
 - Theme system
 - Smooth scrolling
 - Documentation structure
 
 **Phase 2: Expansion** 🚧
+
 - More Framer Motion components
 - GSAP integration
 - Three.js integration
@@ -74,11 +77,11 @@ See [Roadmap](./docs/00-roadmap.md) for full development plan.
 
 ## 🤝 Contributing
 
-Contributions are welcome! See [Contributing Guide](./docs/contributing.md) for details.
+Contributions are welcome! See [Contributing Guide](./CONTRIBUTING.md) for details.
 
 ## 📄 License
 
-[Add your license here]
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ---
 

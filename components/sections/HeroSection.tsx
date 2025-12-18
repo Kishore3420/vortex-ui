@@ -6,7 +6,7 @@ export function HeroSection() {
       <div className="max-w-4xl text-center">
         <FadeIn direction="up" delay={0.2}>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-linear-to-r from-primary via-[#3282B8] to-primary bg-clip-text text-transparent animate-gradient">
-            AI Studio Portfolio
+            VortexUI
           </h1>
         </FadeIn>
 
