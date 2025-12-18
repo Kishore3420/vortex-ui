@@ -32,6 +32,23 @@ const sections = [
     ],
   },
   {
+    label: 'Text Animations',
+    items: [
+      { href: '/docs/animations/text-reveal', label: 'Text Reveal' },
+      { href: '/docs/animations/character-reveal', label: 'Character Reveal' },
+      { href: '/docs/animations/slide-up-text', label: 'Slide Up Text' },
+      { href: '/docs/animations/typewriter', label: 'Typewriter' },
+    ],
+  },
+  {
+    label: 'Buttons',
+    items: [
+      { href: '/docs/buttons/magnetic-button', label: 'Magnetic Button' },
+      { href: '/docs/buttons/ripple-button', label: 'Ripple Button' },
+      { href: '/docs/buttons/glow-button', label: 'Glow Button' },
+    ],
+  },
+  {
     label: 'Background Effects',
     items: [
       { href: '/docs/animations/gradients', label: 'Animated Gradients' },

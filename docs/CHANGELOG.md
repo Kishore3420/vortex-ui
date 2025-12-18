@@ -5,6 +5,18 @@ All notable changes to VortexUI will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-01-27
+
+### Added
+
+- Text animation components: TextReveal, CharacterReveal, SlideUpText, Typewriter
+- Interactive button components: MagneticButton, RippleButton, GlowButton
+- Public documentation pages for all new components
+- Theme system integration across all components
+- Performance optimizations and accessibility improvements
+
+---
+
 ## [1.0.0] - 2025-01-27
 
 ### 🎉 Version 1.0.0 Release
@@ -54,13 +66,12 @@ First stable release of VortexUI with comprehensive documentation and production
 ### Planned
 
 - Parallax effects
-- Hover animations
-- Magnetic buttons
-- Text reveal animations
 - Page transitions
 - GSAP integration
 - Three.js integration
 - 5 landing page examples
+- Button variant system (primary, secondary, outline, ghost)
+- Pre-built size classes for buttons (sm, md, lg, xl)
 
 ---
 

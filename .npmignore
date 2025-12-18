@@ -15,15 +15,17 @@ out/
 coverage/
 .nyc_output/
 
-# Documentation (keep for now, but can exclude if publishing as package)
-# docs/
-# app/docs/
+# Internal learning documentation (exclude from package)
+docs/
 
-# App-specific files
+# App-specific files (excludes app/docs/ and app/test/)
 app/
 public/
 next.config.ts
 next-env.d.ts
+
+# Note: app/docs/ contains public documentation but is excluded via app/
+# app/test/ contains internal test pages and is excluded via app/
 
 # Config files (keep essential ones)
 # eslint.config.mjs

@@ -4,14 +4,30 @@ import { FadeIn } from '@/components/animations';
 import Link from 'next/link';
 
 export default function ComponentsOverviewPage() {
-  const framerMotionComponents = [
+  const basicAnimations = [
     { href: '/docs/animations/fade-in', label: 'Fade In' },
     { href: '/docs/animations/scale-in', label: 'Scale In' },
     { href: '/docs/animations/rotate-in', label: 'Rotate In' },
     { href: '/docs/animations/blur-in', label: 'Blur In' },
     { href: '/docs/animations/flip-in', label: 'Flip In' },
+  ];
+
+  const staggerAnimations = [
     { href: '/docs/animations/stagger', label: 'Stagger Container' },
     { href: '/docs/animations/stagger-item', label: 'Stagger Item' },
+  ];
+
+  const textAnimations = [
+    { href: '/docs/animations/text-reveal', label: 'Text Reveal' },
+    { href: '/docs/animations/character-reveal', label: 'Character Reveal' },
+    { href: '/docs/animations/slide-up-text', label: 'Slide Up Text' },
+    { href: '/docs/animations/typewriter', label: 'Typewriter' },
+  ];
+
+  const buttonComponents = [
+    { href: '/docs/buttons/magnetic-button', label: 'Magnetic Button' },
+    { href: '/docs/buttons/ripple-button', label: 'Ripple Button' },
+    { href: '/docs/buttons/glow-button', label: 'Glow Button' },
   ];
 
   return (
@@ -30,16 +46,109 @@ export default function ComponentsOverviewPage() {
 
       <FadeIn direction="up" delay={0.1}>
         <section className="space-y-6">
-          <h2 className="text-2xl font-bold">Framer Motion Components</h2>
+          <h2 className="text-2xl font-bold">Basic Animations</h2>
           <p className="text-muted-foreground">
-            Declarative, React-friendly animations perfect for most use cases.
+            Fundamental entrance animations perfect for content reveals.
           </p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {framerMotionComponents.map((component, index) => (
+            {basicAnimations.map((component, index) => (
               <FadeIn
                 key={component.href}
                 direction="up"
                 delay={0.1 + index * 0.05}
+              >
+                <Link
+                  href={component.href}
+                  className="block rounded-lg border border-border bg-card p-5 hover:border-primary/50 transition-all hover:shadow-lg"
+                >
+                  <h3 className="font-semibold mb-2">{component.label}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    View detailed documentation, examples, and usage guides.
+                  </p>
+                  <span className="text-sm text-primary font-medium">
+                    View Component →
+                  </span>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn direction="up" delay={0.2}>
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold">Staggered Animations</h2>
+          <p className="text-muted-foreground">
+            Orchestrate sequential animations for multiple elements.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {staggerAnimations.map((component, index) => (
+              <FadeIn
+                key={component.href}
+                direction="up"
+                delay={0.2 + index * 0.05}
+              >
+                <Link
+                  href={component.href}
+                  className="block rounded-lg border border-border bg-card p-5 hover:border-primary/50 transition-all hover:shadow-lg"
+                >
+                  <h3 className="font-semibold mb-2">{component.label}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    View detailed documentation, examples, and usage guides.
+                  </p>
+                  <span className="text-sm text-primary font-medium">
+                    View Component →
+                  </span>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn direction="up" delay={0.3}>
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold">Text Animations</h2>
+          <p className="text-muted-foreground">
+            Specialized animations for text content with various reveal effects.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {textAnimations.map((component, index) => (
+              <FadeIn
+                key={component.href}
+                direction="up"
+                delay={0.3 + index * 0.05}
+              >
+                <Link
+                  href={component.href}
+                  className="block rounded-lg border border-border bg-card p-5 hover:border-primary/50 transition-all hover:shadow-lg"
+                >
+                  <h3 className="font-semibold mb-2">{component.label}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    View detailed documentation, examples, and usage guides.
+                  </p>
+                  <span className="text-sm text-primary font-medium">
+                    View Component →
+                  </span>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn direction="up" delay={0.4}>
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold">Button Components</h2>
+          <p className="text-muted-foreground">
+            Interactive buttons with engaging hover and click effects.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {buttonComponents.map((component, index) => (
+              <FadeIn
+                key={component.href}
+                direction="up"
+                delay={0.4 + index * 0.05}
               >
                 <Link
                   href={component.href}

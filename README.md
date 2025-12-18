@@ -35,6 +35,9 @@ Comprehensive documentation is available at `/docs`:
 - 📖 **Comprehensive Docs** - Detailed guides and examples
 - ♿ **Accessible** - Respects `prefers-reduced-motion`
 - ⚡ **Performance** - 60fps target, GPU-accelerated
+- 📝 **Text Animations** - Word/character reveals, typewriter effects
+- 🎯 **Interactive Buttons** - Magnetic, ripple, and glow effects
+- 📚 **14 Tutorials** - Comprehensive learning guides for all components
 
 ## 🏗️ Project Structure
 
@@ -60,13 +63,70 @@ Comprehensive documentation is available at `/docs`:
 - Smooth scrolling
 - Documentation structure
 
-**Phase 2: Expansion** 🚧
+**Phase 2: Framer Motion Expansion** ✅
 
-- More Framer Motion components
+- Text animation components (TextReveal, CharacterReveal, SlideUpText, Typewriter)
+- Interactive button components (MagneticButton, RippleButton, GlowButton)
+- Comprehensive tutorials (14 detailed guides)
+- Performance optimizations
+- Theme system integration
+
+**Phase 3: Advanced Features** 🚧
+
 - GSAP integration
 - Three.js integration
+- Parallax effects
+- Page transitions
 
 See [Roadmap](./docs/00-roadmap.md) for full development plan.
+
+## 📦 Components
+
+### Animation Components (11)
+
+- **Basic:** FadeIn, ScaleIn, RotateIn, BlurIn, FlipIn
+- **Stagger:** StaggerContainer, StaggerItem
+- **Text:** TextReveal, CharacterReveal, SlideUpText, Typewriter
+
+### Button Components (3)
+
+- **MagneticButton** - Mouse-attracted buttons with spring physics
+- **RippleButton** - Material Design-inspired ripple effect
+- **GlowButton** - Hover glow animations
+
+### UI Components (3)
+
+- CodeBlock, DocsSidebar, ThemeToggle
+
+## 📚 Tutorials
+
+Comprehensive tutorials available in `docs/tutorials/`:
+
+**Text Animations:**
+
+- [TextReveal Tutorial](./docs/tutorials/text-reveal-tutorial.md)
+- [CharacterReveal Tutorial](./docs/tutorials/character-reveal-tutorial.md)
+- [SlideUpText Tutorial](./docs/tutorials/slide-up-text-tutorial.md)
+- [Typewriter Tutorial](./docs/tutorials/typewriter-tutorial.md)
+
+**Button Components:**
+
+- [MagneticButton Tutorial](./docs/tutorials/magnetic-button-tutorial.md)
+- [RippleButton Tutorial](./docs/tutorials/ripple-button-tutorial.md)
+- [GlowButton Tutorial](./docs/tutorials/glow-button-tutorial.md)
+
+**Basic Animations:**
+
+- [FadeIn Tutorial](./docs/tutorials/fade-in-tutorial.md)
+- [ScaleIn Tutorial](./docs/tutorials/scale-in-tutorial.md)
+- [RotateIn Tutorial](./docs/tutorials/rotate-in-tutorial.md)
+- [BlurIn Tutorial](./docs/tutorials/blur-in-tutorial.md)
+- [FlipIn Tutorial](./docs/tutorials/flip-in-tutorial.md)
+
+**Stagger Animations:**
+
+- [StaggerContainer Tutorial](./docs/tutorials/stagger-container-tutorial.md)
+- [StaggerItem Tutorial](./docs/tutorials/stagger-item-tutorial.md)
 
 ## 📖 Learn More
 
@@ -74,6 +134,7 @@ See [Roadmap](./docs/00-roadmap.md) for full development plan.
 - [Examples](./docs/examples/README.md) - Code examples
 - [Component Library](./docs/components/README.md) - All components
 - [Best Practices](./docs/07-performance.md) - Performance guide
+- [Changelog](./docs/CHANGELOG.md) - Version history
 
 ## 🤝 Contributing
 
