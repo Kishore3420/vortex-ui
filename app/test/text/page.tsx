@@ -9,7 +9,7 @@ import {
 
 export default function TestTextPage() {
   return (
-    <div className="min-h-screen bg-black text-white p-8">
+    <div className="min-h-screen bg-background text-foreground p-8">
       <div className="max-w-6xl mx-auto space-y-32">
         {/* TextReveal - Basic */}
         <section className="min-h-screen flex items-center justify-center">
@@ -27,7 +27,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <TextReveal
               text="Fast stagger reveals words quickly"
-              className="text-5xl font-bold text-purple-400"
+              className="text-5xl font-bold text-primary"
               delay={0.3}
               staggerDelay={0.08}
             />
@@ -39,7 +39,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <TextReveal
               text="Slow dramatic reveal with deliberate timing"
-              className="text-5xl font-bold text-blue-400"
+              className="text-5xl font-bold text-secondary"
               delay={0.4}
               staggerDelay={0.2}
             />
@@ -51,7 +51,7 @@ export default function TestTextPage() {
           <div className="text-center max-w-4xl">
             <TextReveal
               text="This is a longer sentence that demonstrates how TextReveal handles multiple words in a paragraph format"
-              className="text-3xl font-semibold text-gray-300"
+              className="text-3xl font-semibold text-muted-foreground"
               delay={0.2}
               staggerDelay={0.1}
             />
@@ -63,7 +63,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <TextReveal
               text="Beautiful gradient text animation"
-              className="text-7xl font-bold bg-linear-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
+              className="text-7xl font-bold bg-linear-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent"
               delay={0.3}
             />
           </div>
@@ -74,7 +74,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <TextReveal
               text="Small subtle animation"
-              className="text-2xl font-normal text-gray-400"
+              className="text-2xl font-normal text-muted-foreground"
               delay={0.1}
               staggerDelay={0.15}
             />
@@ -86,7 +86,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <CharacterReveal
               text="Character Animation"
-              className="text-7xl font-bold bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
+              className="text-7xl font-bold bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent"
               delay={0.5}
             />
           </div>
@@ -97,7 +97,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <CharacterReveal
               text="Fast Character Reveal"
-              className="text-6xl font-bold text-cyan-400"
+              className="text-6xl font-bold text-primary"
               delay={0.3}
               staggerDelay={0.02}
             />
@@ -109,7 +109,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <CharacterReveal
               text="Slow Character Reveal"
-              className="text-6xl font-bold text-yellow-400"
+              className="text-6xl font-bold text-accent"
               delay={0.4}
               staggerDelay={0.05}
             />
@@ -121,7 +121,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <CharacterReveal
               text="Hello"
-              className="text-8xl font-bold text-green-400"
+              className="text-8xl font-bold text-primary"
               delay={0.2}
             />
           </div>
@@ -132,7 +132,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <CharacterReveal
               text="VortexUI"
-              className="text-9xl font-black bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              className="text-9xl font-black bg-linear-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent"
               delay={0.3}
               staggerDelay={0.03}
             />
@@ -144,7 +144,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <CharacterReveal
               text="2025"
-              className="text-8xl font-bold text-orange-400"
+              className="text-8xl font-bold text-primary"
               delay={0.2}
             />
           </div>
@@ -180,7 +180,7 @@ export default function TestTextPage() {
             <SlideUpText
               delay={0.1}
               duration={0.5}
-              className="text-5xl font-bold text-purple-400"
+              className="text-5xl font-bold text-primary"
             >
               Fast Slide Up
             </SlideUpText>
@@ -193,7 +193,7 @@ export default function TestTextPage() {
             <SlideUpText
               delay={0.2}
               duration={1.2}
-              className="text-5xl font-bold text-blue-400"
+              className="text-5xl font-bold text-primary"
             >
               Slow Dramatic Slide
             </SlideUpText>
@@ -208,7 +208,7 @@ export default function TestTextPage() {
             </SlideUpText>
             <SlideUpText
               delay={0.3}
-              className="text-4xl font-light text-gray-400"
+              className="text-4xl font-light text-muted-foreground"
             >
               To the Future
             </SlideUpText>
@@ -223,7 +223,7 @@ export default function TestTextPage() {
           <div className="text-center">
             <SlideUpText
               delay={0.2}
-              className="text-7xl font-bold bg-linear-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent"
+              className="text-7xl font-bold bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent"
             >
               Gradient Slide
             </SlideUpText>
@@ -249,7 +249,7 @@ export default function TestTextPage() {
               text="Fast typing speed"
               delay={0.3}
               speed={30}
-              className="text-4xl font-mono text-green-400"
+              className="text-4xl font-mono text-primary"
             />
           </div>
         </section>
@@ -261,7 +261,7 @@ export default function TestTextPage() {
               text="Slow deliberate typing"
               delay={0.4}
               speed={120}
-              className="text-4xl font-mono text-yellow-400"
+              className="text-4xl font-mono text-accent"
             />
           </div>
         </section>
@@ -273,7 +273,7 @@ export default function TestTextPage() {
               text="const hello = 'world';"
               delay={0.2}
               speed={60}
-              className="text-3xl font-mono text-cyan-400"
+              className="text-3xl font-mono text-primary"
             />
           </div>
         </section>
@@ -285,7 +285,7 @@ export default function TestTextPage() {
               text="$ npm install vortex-ui"
               delay={0.3}
               speed={70}
-              className="text-4xl font-mono text-green-400"
+              className="text-4xl font-mono text-primary"
             />
           </div>
         </section>
@@ -298,7 +298,7 @@ export default function TestTextPage() {
               delay={0.2}
               speed={50}
               showCursor={false}
-              className="text-4xl font-mono text-purple-400"
+              className="text-4xl font-mono text-primary"
             />
           </div>
         </section>
@@ -311,7 +311,7 @@ export default function TestTextPage() {
               delay={0.3}
               speed={60}
               cursorChar="_"
-              className="text-4xl font-mono text-blue-400"
+              className="text-4xl font-mono text-primary"
             />
           </div>
         </section>
@@ -323,7 +323,7 @@ export default function TestTextPage() {
               text="This is a longer typewriter text that demonstrates how the component handles extended content with multiple words and sentences."
               delay={0.4}
               speed={40}
-              className="text-2xl font-mono text-gray-300"
+              className="text-2xl font-mono text-muted-foreground"
             />
           </div>
         </section>
@@ -333,13 +333,13 @@ export default function TestTextPage() {
           <div className="text-center space-y-8">
             <TextReveal
               text="Welcome to VortexUI"
-              className="text-7xl font-black bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+              className="text-7xl font-black bg-linear-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent"
               delay={0.2}
               staggerDelay={0.15}
             />
             <SlideUpText
               delay={0.8}
-              className="text-2xl font-light text-gray-400"
+              className="text-2xl font-light text-muted-foreground"
             >
               The most comprehensive animation library
             </SlideUpText>
@@ -347,7 +347,7 @@ export default function TestTextPage() {
               text="Start building amazing animations today"
               delay={1.2}
               speed={50}
-              className="text-xl font-mono text-gray-500"
+              className="text-xl font-mono text-muted-foreground"
             />
           </div>
         </section>
@@ -357,7 +357,7 @@ export default function TestTextPage() {
           <div className="text-center space-y-6">
             <CharacterReveal
               text="Features"
-              className="text-6xl font-bold text-purple-400"
+              className="text-6xl font-bold text-primary"
               delay={0.2}
             />
             <div className="space-y-4 mt-8">
@@ -393,19 +393,19 @@ export default function TestTextPage() {
             </SlideUpText>
             <CharacterReveal
               text="Animation"
-              className="text-5xl font-bold text-cyan-400"
+              className="text-5xl font-bold text-primary"
               delay={0.4}
             />
             <TextReveal
               text="Types Together"
-              className="text-5xl font-bold text-pink-400"
+              className="text-5xl font-bold text-primary"
               delay={0.8}
             />
             <Typewriter
               text="Creating amazing experiences"
               delay={1.2}
               speed={60}
-              className="text-2xl font-mono text-gray-400"
+              className="text-2xl font-mono text-muted-foreground"
             />
           </div>
         </section>
@@ -441,17 +441,17 @@ export default function TestTextPage() {
           <div className="text-center space-y-8">
             <CharacterReveal
               text="BOLD"
-              className="text-8xl font-black text-red-400"
+              className="text-8xl font-black text-primary"
               delay={0.2}
             />
             <CharacterReveal
               text="Regular"
-              className="text-6xl font-normal text-blue-400"
+              className="text-6xl font-normal text-primary"
               delay={0.5}
             />
             <CharacterReveal
               text="Light"
-              className="text-5xl font-light text-green-400"
+              className="text-5xl font-light text-primary"
               delay={0.8}
             />
           </div>
@@ -464,25 +464,25 @@ export default function TestTextPage() {
               text="Very Fast (30ms)"
               delay={0}
               speed={30}
-              className="text-3xl font-mono text-green-400"
+              className="text-3xl font-mono text-primary"
             />
             <Typewriter
               text="Fast (50ms)"
               delay={1.5}
               speed={50}
-              className="text-3xl font-mono text-blue-400"
+              className="text-3xl font-mono text-primary"
             />
             <Typewriter
               text="Medium (80ms)"
               delay={3}
               speed={80}
-              className="text-3xl font-mono text-purple-400"
+              className="text-3xl font-mono text-primary"
             />
             <Typewriter
               text="Slow (120ms)"
               delay={4.5}
               speed={120}
-              className="text-3xl font-mono text-yellow-400"
+              className="text-3xl font-mono text-accent"
             />
           </div>
         </section>

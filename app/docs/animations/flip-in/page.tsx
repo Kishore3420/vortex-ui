@@ -79,7 +79,9 @@ export default function FlipInPage() {
                   </li>
                   <li>
                     Inner element has{' '}
-                    <code className="bg-background px-1 rounded">transformStyle: 'preserve-3d'</code>
+                    <code className="bg-background px-1 rounded">
+                      transformStyle: &apos;preserve-3d&apos;
+                    </code>
                   </li>
                   <li>
                     This creates the 3D space needed for the flip effect

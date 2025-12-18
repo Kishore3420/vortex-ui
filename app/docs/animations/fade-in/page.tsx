@@ -1,9 +1,6 @@
 'use client';
 
-import {
-  FadeIn,
-  ScaleIn,
-} from '@/components/animations';
+import { FadeIn } from '@/components/animations';
 import { CodeBlock } from '@/components/ui/CodeBlock';
 
 export default function FadeInPage() {
@@ -766,7 +763,13 @@ motion.div
                 <li>Use consistent directions throughout your page</li>
                 <li>Keep durations between 0.3s - 1s for best UX</li>
                 <li>Stagger multiple elements with delays (0.1s - 0.2s apart)</li>
-                <li>Use <code className="bg-background px-1 rounded">direction="up"</code> for most content</li>
+                <li>
+                  Use{' '}
+                  <code className="bg-background px-1 rounded">
+                    direction=&quot;up&quot;
+                  </code>{' '}
+                  for most content
+                </li>
                 <li>Test on mobile devices for performance</li>
               </ul>
             </div>

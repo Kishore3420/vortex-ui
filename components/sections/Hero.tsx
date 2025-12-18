@@ -9,8 +9,12 @@ export const Hero = () => {
       <motion.div
         className="absolute inset-0"
         style={{
-          background:
-            'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%)',
+          background: `linear-gradient(135deg,
+            hsl(var(--primary)) 0%,
+            hsl(var(--primary) / 0.8) 25%,
+            hsl(var(--secondary)) 50%,
+            hsl(var(--primary) / 0.9) 75%,
+            hsl(var(--primary)) 100%)`,
           backgroundSize: '400% 400%',
         }}
         animate={{
@@ -25,7 +29,8 @@ export const Hero = () => {
 
       {/* Animated Orbs/Blobs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl"
+        style={{ backgroundColor: 'hsl(var(--primary) / 0.3)' }}
         animate={{
           x: [0, 100, 0],
           y: [0, -100, 0],
@@ -39,7 +44,8 @@ export const Hero = () => {
       />
 
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl"
+        style={{ backgroundColor: 'hsl(var(--secondary) / 0.3)' }}
         animate={{
           x: [0, -100, 0],
           y: [0, 100, 0],
@@ -53,14 +59,14 @@ export const Hero = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-background/40 backdrop-blur-sm" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-8 text-center">
-        <h1 className="text-7xl font-bold text-white mb-6">
+        <h1 className="text-7xl font-bold text-foreground mb-6">
           Welcome to the Future
         </h1>
-        <p className="text-xl text-gray-200">
+        <p className="text-xl text-muted-foreground">
           Experience next-generation web design
         </p>
       </div>

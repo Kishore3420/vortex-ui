@@ -10,21 +10,28 @@ export default function TestIndexPage() {
       title: 'Basics',
       description:
         'Comprehensive testing page for all animation components including easing functions, FadeIn, ScaleIn, RotateIn, and Stagger animations.',
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-primary to-primary/60',
     },
     {
       href: '/test/hero',
       title: 'Hero Variants',
       description:
         'Test different hero section variants including standard, mesh gradient, and spotlight effects.',
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-primary to-primary/80',
     },
     {
       href: '/test/text',
       title: 'Text Animations',
       description:
         'Test different text animations including TextReveal, CharacterReveal, and Typewriter.',
-      color: 'from-green-600 to-teal-600',
+      color: 'from-secondary to-secondary/60',
+    },
+    {
+      href: '/test/buttons',
+      title: 'Buttons',
+      description:
+        'Test different button animations including GlowButton, MagneticButton, and RippleButton.',
+      color: 'from-accent to-accent/60',
     },
   ];
 

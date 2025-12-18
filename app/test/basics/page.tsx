@@ -37,7 +37,7 @@ export default function TestAnimationsPage() {
 
           <div className="space-y-6">
             <FadeIn direction="up" easing="easeIn">
-              <div className="bg-linear-to-r from-red-600 to-red-500 p-6 rounded-lg border-l-4 border-red-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Ease In</h3>
                 <p className="text-sm opacity-90">
                   Starts slow, ends fast. Like a car accelerating. Good for
@@ -50,7 +50,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" easing="easeOut">
-              <div className="bg-linear-to-r from-blue-600 to-blue-500 p-6 rounded-lg border-l-4 border-blue-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Ease Out</h3>
                 <p className="text-sm opacity-90">
                   Starts fast, ends slow. Like a car braking. Most natural for
@@ -63,7 +63,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" easing="easeInOut">
-              <div className="bg-linear-to-r from-green-600 to-green-500 p-6 rounded-lg border-l-4 border-green-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Ease In Out</h3>
                 <p className="text-sm opacity-90">
                   Slow start, fast middle, slow end. Most balanced and natural
@@ -76,7 +76,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" easing="linear">
-              <div className="bg-linear-to-r from-gray-600 to-gray-500 p-6 rounded-lg border-l-4 border-gray-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-muted">
                 <h3 className="text-xl font-bold mb-2">Linear</h3>
                 <p className="text-sm opacity-90">
                   Constant speed. No acceleration or deceleration. Mechanical
@@ -87,7 +87,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" easing="bounce">
-              <div className="bg-linear-to-r from-yellow-600 to-yellow-500 p-6 rounded-lg border-l-4 border-yellow-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-accent">
                 <h3 className="text-xl font-bold mb-2">Bounce</h3>
                 <p className="text-sm opacity-90">
                   Playful bounce effect. Overshoots and bounces back. Great for
@@ -100,7 +100,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" easing="spring">
-              <div className="bg-linear-to-r from-purple-600 to-purple-500 p-6 rounded-lg border-l-4 border-purple-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Spring</h3>
                 <p className="text-sm opacity-90">
                   Natural spring-like motion. Elastic and bouncy but controlled.
@@ -112,7 +112,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" easing="smooth">
-              <div className="bg-linear-to-r from-indigo-600 to-indigo-500 p-6 rounded-lg border-l-4 border-indigo-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Smooth (Default)</h3>
                 <p className="text-sm opacity-90">
                   Very smooth, gentle motion. Premium feel. Current default.
@@ -124,7 +124,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" easing="sharp">
-              <div className="bg-linear-to-r from-pink-600 to-pink-500 p-6 rounded-lg border-l-4 border-pink-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Sharp</h3>
                 <p className="text-sm opacity-90">
                   Quick, snappy motion. Fast and precise. Good for quick
@@ -151,7 +151,7 @@ export default function TestAnimationsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <FadeIn direction="up">
-              <div className="bg-linear-to-br from-purple-600 to-pink-600 p-6 rounded-lg">
+              <div className="bg-card border border-border p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-2">Fade Up (Default)</h3>
                 <p className="text-sm opacity-90">
                   Slides up 40px while fading in. Most common direction.
@@ -160,7 +160,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="down">
-              <div className="bg-linear-to-br from-blue-600 to-cyan-600 p-6 rounded-lg">
+              <div className="bg-card border border-border p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-2">Fade Down</h3>
                 <p className="text-sm opacity-90">
                   Slides down while fading. Good for top-to-bottom flow.
@@ -169,7 +169,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="left">
-              <div className="bg-linear-to-br from-cyan-600 to-teal-600 p-6 rounded-lg">
+              <div className="bg-card border border-border p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-2">Fade Left</h3>
                 <p className="text-sm opacity-90">
                   Slides from right to left. Creates reading flow.
@@ -178,7 +178,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="right">
-              <div className="bg-linear-to-br from-teal-600 to-green-600 p-6 rounded-lg">
+              <div className="bg-card border border-border p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-2">Fade Right</h3>
                 <p className="text-sm opacity-90">
                   Slides from left to right. Alternative reading flow.
@@ -189,7 +189,7 @@ export default function TestAnimationsPage() {
 
           <div className="space-y-6">
             <FadeIn direction="none" withSlide={false}>
-              <div className="bg-linear-to-r from-emerald-600 to-emerald-500 p-6 rounded-lg border-l-4 border-emerald-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Fade Only (No Slide)</h3>
                 <p className="text-sm opacity-90">
                   Pure fade effect without any sliding motion. Subtle and
@@ -202,7 +202,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" offset={20}>
-              <div className="bg-linear-to-r from-violet-600 to-violet-500 p-6 rounded-lg border-l-4 border-violet-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Small Offset (20px)</h3>
                 <p className="text-sm opacity-90">
                   Subtle slide with smaller distance. More refined feel.
@@ -214,7 +214,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" offset={80}>
-              <div className="bg-linear-to-r from-rose-600 to-rose-500 p-6 rounded-lg border-l-4 border-rose-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Large Offset (80px)</h3>
                 <p className="text-sm opacity-90">
                   Dramatic slide with larger distance. More noticeable effect.
@@ -226,7 +226,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" viewportMargin="0px">
-              <div className="bg-linear-to-r from-amber-600 to-amber-500 p-6 rounded-lg border-l-4 border-amber-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-accent">
                 <h3 className="text-xl font-bold mb-2">
                   Immediate Trigger (0px margin)
                 </h3>
@@ -240,7 +240,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" viewportMargin="-200px" easing="spring">
-              <div className="bg-linear-to-r from-indigo-600 to-indigo-500 p-6 rounded-lg border-l-4 border-indigo-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">
                   Early Trigger (-200px margin)
                 </h3>
@@ -255,7 +255,7 @@ export default function TestAnimationsPage() {
             </FadeIn>
 
             <FadeIn direction="up" once={false} easing="easeOut">
-              <div className="bg-linear-to-r from-pink-600 to-pink-500 p-6 rounded-lg border-l-4 border-pink-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Repeatable Animation</h3>
                 <p className="text-sm opacity-90">
                   Animates every time it enters viewport. Good for
@@ -282,19 +282,19 @@ export default function TestAnimationsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <ScaleIn delay={0} scale={0.5}>
-              <div className="bg-linear-to-br from-pink-600 to-rose-600 p-8 rounded-lg aspect-square flex items-center justify-center">
+              <div className="bg-card border border-border p-8 rounded-lg aspect-square flex items-center justify-center">
                 <span className="text-xl font-bold">Small Start (0.5)</span>
               </div>
             </ScaleIn>
 
             <ScaleIn delay={0.15} scale={0.8}>
-              <div className="bg-linear-to-br from-rose-600 to-red-600 p-8 rounded-lg aspect-square flex items-center justify-center">
+              <div className="bg-card border border-border p-8 rounded-lg aspect-square flex items-center justify-center">
                 <span className="text-xl font-bold">Medium Start (0.8)</span>
               </div>
             </ScaleIn>
 
             <ScaleIn delay={0.3} scale={0.9}>
-              <div className="bg-linear-to-br from-red-600 to-orange-600 p-8 rounded-lg aspect-square flex items-center justify-center">
+              <div className="bg-card border border-border p-8 rounded-lg aspect-square flex items-center justify-center">
                 <span className="text-xl font-bold">Large Start (0.9)</span>
               </div>
             </ScaleIn>
@@ -302,7 +302,7 @@ export default function TestAnimationsPage() {
 
           <div className="space-y-6">
             <ScaleIn easing="bounce" scale={0.3}>
-              <div className="bg-linear-to-r from-purple-600 to-purple-500 p-6 rounded-lg border-l-4 border-purple-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">
                   Bounce Easing (Default)
                 </h3>
@@ -316,7 +316,7 @@ export default function TestAnimationsPage() {
             </ScaleIn>
 
             <ScaleIn easing="spring" scale={0.5}>
-              <div className="bg-linear-to-r from-indigo-600 to-indigo-500 p-6 rounded-lg border-l-4 border-indigo-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Spring Easing</h3>
                 <p className="text-sm opacity-90">
                   Natural spring-like motion. Elastic and bouncy but controlled.
@@ -328,7 +328,7 @@ export default function TestAnimationsPage() {
             </ScaleIn>
 
             <ScaleIn easing="smooth" scale={0.7}>
-              <div className="bg-linear-to-r from-blue-600 to-blue-500 p-6 rounded-lg border-l-4 border-blue-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Smooth Easing</h3>
                 <p className="text-sm opacity-90">
                   Very smooth, gentle motion. Premium feel for elegant
@@ -341,7 +341,7 @@ export default function TestAnimationsPage() {
             </ScaleIn>
 
             <ScaleIn easing="sharp" scale={0.6} withFade={false}>
-              <div className="bg-linear-to-r from-green-600 to-green-500 p-6 rounded-lg border-l-4 border-green-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Scale Only (No Fade)</h3>
                 <p className="text-sm opacity-90">
                   Quick, snappy scaling without fading. Good for instant
@@ -354,7 +354,7 @@ export default function TestAnimationsPage() {
             </ScaleIn>
 
             <ScaleIn easing="easeOut" scale={0.4} transformOrigin="top left">
-              <div className="bg-linear-to-r from-orange-600 to-orange-500 p-6 rounded-lg border-l-4 border-orange-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-accent">
                 <h3 className="text-xl font-bold mb-2">
                   Transform Origin: Top Left
                 </h3>
@@ -373,7 +373,7 @@ export default function TestAnimationsPage() {
               scale={0.4}
               transformOrigin="bottom right"
             >
-              <div className="bg-linear-to-r from-yellow-600 to-yellow-500 p-6 rounded-lg border-l-4 border-yellow-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-accent">
                 <h3 className="text-xl font-bold mb-2">
                   Transform Origin: Bottom Right
                 </h3>
@@ -401,7 +401,7 @@ export default function TestAnimationsPage() {
 
           <div className="space-y-6">
             <RotateIn direction="clockwise" angle={180}>
-              <div className="bg-linear-to-r from-emerald-600 to-emerald-500 p-6 rounded-lg border-l-4 border-emerald-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Clockwise Rotation</h3>
                 <p className="text-sm opacity-90">
                   Rotates 180° clockwise into view. Default with fade effect.
@@ -413,7 +413,7 @@ export default function TestAnimationsPage() {
             </RotateIn>
 
             <RotateIn direction="counterclockwise" angle={180}>
-              <div className="bg-linear-to-r from-teal-600 to-teal-500 p-6 rounded-lg border-l-4 border-teal-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">
                   Counter-Clockwise Rotation
                 </h3>
@@ -428,7 +428,7 @@ export default function TestAnimationsPage() {
             </RotateIn>
 
             <RotateIn direction="clockwise" angle={360} easing="bounce">
-              <div className="bg-linear-to-r from-cyan-600 to-cyan-500 p-6 rounded-lg border-l-4 border-cyan-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Full Spin (360°)</h3>
                 <p className="text-sm opacity-90">
                   Complete rotation with bounce easing. Playful and
@@ -447,7 +447,7 @@ export default function TestAnimationsPage() {
               scale={0.5}
               easing="spring"
             >
-              <div className="bg-linear-to-r from-violet-600 to-violet-500 p-6 rounded-lg border-l-4 border-violet-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-2">Rotate + Scale</h3>
                 <p className="text-sm opacity-90">
                   Combines rotation with scaling. Starts small and rotated, ends
@@ -465,7 +465,7 @@ export default function TestAnimationsPage() {
               withFade={false}
               easing="sharp"
             >
-              <div className="bg-linear-to-r from-amber-600 to-amber-500 p-6 rounded-lg border-l-4 border-amber-400">
+              <div className="bg-card border border-border p-6 rounded-lg border-l-4 border-accent">
                 <h3 className="text-xl font-bold mb-2">
                   Rotation Only (No Fade)
                 </h3>
@@ -481,13 +481,13 @@ export default function TestAnimationsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <RotateIn direction="clockwise" angle={90} delay={0}>
-              <div className="bg-linear-to-br from-purple-600 to-pink-600 p-6 rounded-xl aspect-square flex items-center justify-center">
+              <div className="bg-card border border-border p-6 rounded-xl aspect-square flex items-center justify-center">
                 <span className="text-2xl font-bold">Card 1</span>
               </div>
             </RotateIn>
 
             <RotateIn direction="counterclockwise" angle={90} delay={0.1}>
-              <div className="bg-linear-to-br from-blue-600 to-cyan-600 p-6 rounded-xl aspect-square flex items-center justify-center">
+              <div className="bg-card border border-border p-6 rounded-xl aspect-square flex items-center justify-center">
                 <span className="text-2xl font-bold">Card 2</span>
               </div>
             </RotateIn>
@@ -498,7 +498,7 @@ export default function TestAnimationsPage() {
               delay={0.2}
               easing="bounce"
             >
-              <div className="bg-linear-to-br from-green-600 to-emerald-600 p-6 rounded-xl aspect-square flex items-center justify-center">
+              <div className="bg-card border border-border p-6 rounded-xl aspect-square flex items-center justify-center">
                 <span className="text-2xl font-bold">Card 3</span>
               </div>
             </RotateIn>
@@ -524,7 +524,7 @@ export default function TestAnimationsPage() {
               <StaggerContainer staggerDelay={0.15}>
                 {[1, 2, 3, 4].map((num) => (
                   <StaggerItem key={num}>
-                    <div className="bg-linear-to-r from-orange-600 to-yellow-600 p-6 rounded-lg mb-4">
+                    <div className="bg-card border border-border p-6 rounded-lg mb-4">
                       <h4 className="text-xl font-bold">Item {num}</h4>
                       <p className="mt-2">
                         Spring animation with fade and slide up
@@ -593,7 +593,7 @@ export default function TestAnimationsPage() {
                   easing="spring"
                   animationType="tween"
                 >
-                  <div className="bg-linear-to-br from-pink-600 to-rose-600 p-8 rounded-xl aspect-square flex items-center justify-center">
+                  <div className="bg-card border border-border p-8 rounded-xl aspect-square flex items-center justify-center">
                     <span className="text-2xl font-bold">Card {num}</span>
                   </div>
                 </StaggerItem>
@@ -615,7 +615,7 @@ export default function TestAnimationsPage() {
               {['Design', 'Development', 'Strategy', 'Marketing'].map(
                 (service) => (
                   <StaggerItem key={service}>
-                    <div className="bg-linear-to-br from-indigo-600 to-purple-600 p-8 rounded-xl">
+                    <div className="bg-card border border-border p-8 rounded-xl">
                       <h3 className="text-2xl font-bold mb-2">{service}</h3>
                       <p className="text-gray-200">
                         Professional {service.toLowerCase()} services for modern

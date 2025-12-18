@@ -5,7 +5,6 @@ import {
   StaggerContainer,
   StaggerItem,
 } from '@/components/animations';
-import { CodeBlock } from '@/components/ui/CodeBlock';
 
 export default function StaggerItemPage() {
   const items = [1, 2, 3, 4];

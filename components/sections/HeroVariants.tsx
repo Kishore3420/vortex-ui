@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 // Variant 1: Mesh Gradient
 export const MeshGradientHero = () => {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-background">
       {/* Mesh Gradient Effect */}
       <motion.div
         className="absolute inset-0 opacity-60"
@@ -31,7 +31,7 @@ export const MeshGradientHero = () => {
       />
 
       <div className="relative z-10 text-center px-8">
-        <h1 className="text-7xl font-bold text-white">Mesh Gradient</h1>
+        <h1 className="text-7xl font-bold text-foreground">Mesh Gradient</h1>
       </div>
     </section>
   );
@@ -40,12 +40,11 @@ export const MeshGradientHero = () => {
 // Variant 2: Spotlight Effect
 export const SpotlightHero = () => {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-background">
       <motion.div
         className="absolute inset-0"
         style={{
-          background:
-            'radial-gradient(circle at center, rgba(139, 92, 246, 0.3) 0%, transparent 70%)',
+          background: `radial-gradient(circle at center, hsl(var(--primary) / 0.3) 0%, transparent 70%)`,
         }}
         animate={{
           scale: [1, 1.2, 1],
@@ -59,7 +58,7 @@ export const SpotlightHero = () => {
       />
 
       <div className="relative z-10 text-center px-8">
-        <h1 className="text-7xl font-bold text-white">Spotlight Effect</h1>
+        <h1 className="text-7xl font-bold text-foreground">Spotlight Effect</h1>
       </div>
     </section>
   );
