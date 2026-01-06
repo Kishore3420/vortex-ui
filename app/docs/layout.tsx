@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 export default function DocsLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground" data-scroll-behavior="smooth">
       <div className="flex min-h-screen">
         <DocsSidebar />
         <main className="flex-1 flex flex-col md:ml-64">

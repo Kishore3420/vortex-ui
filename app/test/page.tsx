@@ -13,6 +13,36 @@ export default function TestIndexPage() {
       color: 'from-primary to-primary/60',
     },
     {
+      href: '/test/backgrounds/aurora',
+      title: 'Aurora',
+      description: 'Ethereal, fluid "Northern Lights" background.',
+      color: 'from-green-400 to-blue-500/60',
+    },
+    {
+      href: '/test/backgrounds/grid-beams',
+      title: 'Grid Beams',
+      description: 'High-tech structural grid with moving light beams.',
+      color: 'from-indigo-500 to-purple-500/60',
+    },
+    {
+      href: '/test/backgrounds/shooting-stars',
+      title: 'Shooting Stars',
+      description: 'Whimsical meteor shower effect.',
+      color: 'from-yellow-400 to-orange-500/60',
+    },
+    {
+      href: '/test/backgrounds/mesh-gradient',
+      title: 'Mesh Gradient',
+      description: 'Test the Mesh Gradient background animation.',
+      color: 'from-pink-500 to-rose-500/60',
+    },
+    {
+      href: '/test/backgrounds/spotlight',
+      title: 'Spotlight',
+      description: 'Test the Spotlight background effect.',
+      color: 'from-blue-500 to-cyan-500/60',
+    },
+    {
       href: '/test/hero',
       title: 'Hero Variants',
       description:
