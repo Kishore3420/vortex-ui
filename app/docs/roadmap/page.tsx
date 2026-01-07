@@ -19,18 +19,23 @@ export default function RoadmapPage() {
       ],
     },
     {
-      title: 'Phase 2: Framer Motion Expansion',
+      title: 'Phase 2: Animation Expansion',
       status: 'in-progress',
       description:
-        'Expand Framer Motion component library with advanced animations',
+        'Expand Framer Motion component library with advanced animations and effects',
       items: [
-        'Parallax scrolling effects',
-        'Hover animations and interactions',
-        'Magnetic button effects',
-        'Text reveal animations',
-        'Page transition effects',
-        'Advanced stagger patterns',
-        'Motion blur effects (directional blur with movement)',
+        '✅ Text reveal animations (19 components)',
+        '✅ Background effects (5 components)',
+        '✅ Button components (6 components)',
+        '✅ Core animations (6 components)',
+        '✅ Component organization & documentation',
+        '⏳ Parallax scrolling effects',
+        '⏳ Page transition effects',
+        '⏳ Advanced hover animations',
+        '⏳ Cursor follow effects',
+        '⏳ Drag and drop animations',
+        '⏳ Layout animations',
+        '⏳ Shared element transitions',
       ],
     },
     {
@@ -180,10 +185,31 @@ export default function RoadmapPage() {
           <h2 className="text-xl font-bold">Current Focus</h2>
           <p className="text-muted-foreground">
             We&apos;re currently working on{' '}
-            <strong>Phase 2: Framer Motion Expansion</strong>. This includes
-            documenting all existing animations and adding advanced interaction
-            patterns. Stay tuned for updates!
+            <strong>Phase 2: Animation Expansion</strong>. We&apos;ve completed
+            36 production-ready components (19 text animations, 5 backgrounds, 6
+            buttons, 6 core) with full documentation. Next up: parallax effects,
+            page transitions, and advanced interaction patterns. Stay tuned for
+            updates!
           </p>
+          <div className="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/20">
+            <p className="text-sm font-medium text-primary mb-2">
+              Current Progress: 36 Components
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+              <div>
+                <span className="font-semibold">Text:</span> 19
+              </div>
+              <div>
+                <span className="font-semibold">Backgrounds:</span> 5
+              </div>
+              <div>
+                <span className="font-semibold">Buttons:</span> 6
+              </div>
+              <div>
+                <span className="font-semibold">Core:</span> 6
+              </div>
+            </div>
+          </div>
         </section>
       </FadeIn>
     </div>

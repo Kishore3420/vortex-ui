@@ -18,10 +18,10 @@ export default function ComponentsOverviewPage() {
   ];
 
   const textAnimations = [
-    { href: '/docs/animations/text-reveal', label: 'Text Reveal' },
-    { href: '/docs/animations/character-reveal', label: 'Character Reveal' },
+    { href: '/docs/text/text-reveal', label: 'Text Reveal' },
+    { href: '/docs/text/character-reveal', label: 'Character Reveal' },
     { href: '/docs/animations/slide-up-text', label: 'Slide Up Text' },
-    { href: '/docs/animations/typewriter', label: 'Typewriter' },
+    { href: '/docs/text/typewriter', label: 'Typewriter' },
   ];
 
   const buttonComponents = [
