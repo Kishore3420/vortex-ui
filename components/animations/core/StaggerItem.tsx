@@ -2,7 +2,7 @@
 
 import { Easing, motion, Transition } from 'framer-motion';
 import { ReactNode } from 'react';
-import type { EasingPreset } from './FadeIn';
+import type { EasingPreset } from '../basic/FadeIn';
 
 const easingPresets: Record<
   EasingPreset,
