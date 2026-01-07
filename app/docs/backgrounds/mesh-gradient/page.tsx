@@ -1,17 +1,18 @@
 'use client';
 
 import { FadeIn } from '@/components/animations';
-import { CodeBlock, GlowButton } from '@/components/ui';
+import { MeshGradient } from '@/components/backgrounds';
+import { CodeBlock } from '@/components/ui';
 
-export default function GlowButtonPage() {
+export default function MeshGradientPage() {
   return (
     <div className="space-y-16">
       <FadeIn direction="up">
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">Glow Button</h1>
+          <h1 className="text-4xl font-bold">Mesh Gradient</h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            A button with a sophisticated hover-activated radiant aura.
-            Combines minimalist design with high-end lighting effects.
+            Smooth, multi-color mesh gradients. Creates a premium,
+            abstract background with slow, organic movement.
           </p>
         </div>
       </FadeIn>
@@ -24,27 +25,26 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              GlowButton uses drop-shadow layering and pseudo-elements to create
-              an internal and external glow. When hovered, the light intensity
-              increases, suggesting that the button is &quot;energizing.&quot; It&apos;s
-              designed for premium dark-mode interfaces where depth and
-              ambient lighting are key design pillars.
+              MeshGradient uses SVG filters and CSS animations to create a
+              &quot;liquid&quot; glass-morphic background. Unlike linear or radial
+              gradients, mesh gradients allow for complex, organic color
+              interactions that feel high-end and modern.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-3">
               <h3 className="font-semibold text-lg">Key Characteristics</h3>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                 <li>
-                  <strong>Radiant Hover:</strong> Aura expands and brightens on interaction
+                  <strong>Organic Motion:</strong> Points move independently for a fluid feel
                 </li>
                 <li>
-                  <strong>Internal Luminescence:</strong> Subtle inner glow for a 3D feel
+                  <strong>Rich Color:</strong> Supports multiple blended color points
                 </li>
                 <li>
-                  <strong>Customizable Glow:</strong> Control the glow color and blur radius
+                  <strong>Glassmorphism:</strong> Works perfectly behind blurred overlays
                 </li>
                 <li>
-                  <strong>Modern Minimal:</strong> Sharp typography paired with soft lighting
+                  <strong>Lightweight:</strong> Pure CSS/SVG implementation
                 </li>
               </ul>
             </div>
@@ -58,13 +58,15 @@ export default function GlowButtonPage() {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.2}>
-          <div className="border border-border rounded-lg p-16 bg-card flex flex-col items-center justify-center gap-8">
-            <GlowButton className="text-[#3b82f6] border-[#3b82f6]/50 bg-[#3b82f6]/10 px-10 py-4 font-bold">
-              ENGAGE SYSTEMS
-            </GlowButton>
-            <GlowButton glowColor="#8b5cf6" className="text-[#8b5cf6] border-[#8b5cf6]/50 px-8 py-3 rounded-full text-sm font-semibold">
-              Subtle Aura
-            </GlowButton>
+          <div className="border border-border rounded-lg h-100 relative overflow-hidden bg-white">
+            <MeshGradient
+               speed={15}
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-8 z-10">
+                <h2 className="text-2xl font-bold text-white">Glass Card</h2>
+              </div>
+            </div>
           </div>
         </FadeIn>
       </section>
@@ -87,16 +89,22 @@ export default function GlowButtonPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">children</code></td>
-                  <td className="border border-border p-3 text-sm"><code>ReactNode</code></td>
-                  <td className="border border-border p-3 text-sm"><span className="text-muted-foreground">Required</span></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Button content</td>
+                  <td className="border border-border p-3"><code className="text-sm">speed</code></td>
+                  <td className="border border-border p-3 text-sm"><code>number</code></td>
+                  <td className="border border-border p-3 text-sm"><code>8</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Animation duration in seconds (lower is faster)</td>
                 </tr>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">glowColor</code></td>
+                  <td className="border border-border p-3"><code className="text-sm">opacityRange</code></td>
+                  <td className="border border-border p-3 text-sm"><code>[number, number]</code></td>
+                  <td className="border border-border p-3 text-sm"><code>[0.6, 0.8]</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Min and max opacity levels</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">className</code></td>
                   <td className="border border-border p-3 text-sm"><code>string</code></td>
-                  <td className="border border-border p-3 text-sm"><code>&quot;#3b82f6&quot;</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">The color of the radiant aura</td>
+                  <td className="border border-border p-3 text-sm"><code>&quot;&quot;</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Additional CSS classes</td>
                 </tr>
               </tbody>
             </table>
@@ -111,16 +119,15 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              The <code>GlowButton</code> makes use of multiple <code>drop-shadow</code> and
-              <code>box-shadow</code> layers on the <code>::before</code> and
-              <code>::after</code> pseudo-elements. These layers are stacked with
-              different blur radii to create a realistic, volumetric light emission.
+              The <code>MeshGradient</code> component works by creating an SVG filter that
+              distorts a set of colored circles. These circles are animated using CSS
+              keyframes to move in a randomized, organic pattern.
             </p>
             <p>
-              When hovered, a CSS transition increases the spread and opacity of these
-              shadow layers. Because we use CSS variables for the color, the entire
-              glow (both internal and external) remains perfectly consistent and can be
-              dynamically updated.
+              By applying a high blur value and a turbulence filter to the SVG container,
+              the distinct edges of the circles are blended together, creating the final
+              &quot;liquid&quot; mesh effect. This approach is highly efficient as it leverages
+              the browser&apos;s native rendering engine for gradients and filters.
             </p>
           </div>
         </FadeIn>
@@ -133,19 +140,19 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Ambience Color</h3>
+              <h3 className="font-semibold text-lg text-foreground">Color Profiles</h3>
               <p className="text-sm text-muted-foreground">
-                The <code>glowColor</code> prop is the source for all light emission.
-                Vibrant, saturated colors (neons) work best as they provide enough
-                contrast for the blur layers to be visible on dark backgrounds.
+                While the component comes with a curated primary palette, you can easily
+                override the background and point colors using CSS variables or the
+                <code>className</code> prop to match your brand.
               </p>
             </div>
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Glow Radius</h3>
+              <h3 className="font-semibold text-lg text-foreground">Animation Feel</h3>
               <p className="text-sm text-muted-foreground">
-                While the blur radius is currently standardized for a premium feel,
-                you can override the <code>--glow-radius</code> CSS variable in your
-                global styles to create sharper or more diffuse lighting profiles.
+                The <code>speed</code> prop controls the overall energy. Use higher values
+                (20s+) for a calm, ambient feel, or lower values (5s-10s) for more
+                dynamic, interactive sections.
               </p>
             </div>
           </div>
@@ -166,8 +173,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Shadow Optimization</h4>
-                  <p className="text-sm text-muted-foreground">Shadow layers are limited to 3-4 levels to ensure that repaint costs remain low during hover transitions, even on mobile browsers.</p>
+                  <h4 className="font-semibold">Optimized Core</h4>
+                  <p className="text-sm text-muted-foreground">Uses SVG and CSS transforms which are GPU-accelerated in most modern browsers, keeping main-thread usage minimal.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -177,8 +184,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Interactive Focus</h4>
-                  <p className="text-sm text-muted-foreground">The glow effect also triggers on keyboard focus, providing a clear visual indicator for users who navigate using a keyboard.</p>
+                  <h4 className="font-semibold">Reduced Motion</h4>
+                  <p className="text-sm text-muted-foreground">Automatically honors the <code>prefers-reduced-motion</code> media query by slowing down or pausing animations.</p>
                 </div>
               </div>
             </div>
@@ -193,12 +200,12 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <ul className="grid gap-4 md:grid-cols-2 list-none p-0">
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Dark Mode Pairing</h4>
-              <p className="text-sm text-muted-foreground">Glow effects rely on background contrast. Always use GlowButton on surfaces darker than <code>#333</code> (zinc-800+) for maximum impact.</p>
+              <h4 className="font-bold mb-2">Contrast Awareness</h4>
+              <p className="text-sm text-muted-foreground">Always ensure text overlays have sufficient contrast against the animated gradient. Dark mode variants are recommended for mesh effects.</p>
             </li>
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Border Opacity</h4>
-              <p className="text-sm text-muted-foreground">Keep the button border partially transparent (e.g., <code>border-primary/50</code>) to let the inner glow blend seamlessly with the outer aura.</p>
+              <h4 className="font-bold mb-2">Layering</h4>
+              <p className="text-sm text-muted-foreground">Apply a subtle noise texture overlay on top of the MeshGradient to reduce color banding on some displays and add a premium film-grain feel.</p>
             </li>
           </ul>
         </FadeIn>
@@ -212,13 +219,14 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <CodeBlock
-              code={`import { GlowButton } from '@/components/ui';
+              code={`import { MeshGradient } from '@/components/backgrounds';
 
-export default function App() {
+export default function Hero() {
   return (
-    <GlowButton glowColor="#22c55e" className="text-green-500 border-green-500/50">
-      Online Now
-    </GlowButton>
+    <div className="relative overflow-hidden">
+      <MeshGradient speed={10} />
+      <div className="relative z-10">Hero Content</div>
+    </div>
   );
 }`}
             />

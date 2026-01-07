@@ -5,6 +5,28 @@ All notable changes to Vortex UI will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-01-07
+
+### 🎉 Documentation & UX Launch Finalization
+
+This release marks the final documentation sweep and UX refinement for the v1.1.0 launch.
+
+### Added
+- **Standardized Documentation**: All background and button components now include "How It Works", "Customization Guide", "Performance & Accessibility", and "Tips & Best Practices" sections.
+- **Premium Sidebar Interface**: Completely redesigned documentation sidebar optimized for productivity.
+  - Interactive collapsed "slim" view with icon-hover popovers.
+  - Lightning-fast `Cmd + K` search integration.
+  - Persistent state management (sidebar preference saved to local storage).
+  - Smooth entrance animations and active-state tracking.
+- **Improved Overviews**: Redesigned category overview pages (Text, Backgrounds, Buttons) with refined copy and design features.
+
+### Fixed
+- **Sidebar Scrolling**: Resolved conflict with Lenis scroll library using `data-lenis-prevent`.
+- **Navigation Performance**: All internal links in the documentation and sidebar now use `next/link` for SPA-like navigation (no full page reloads).
+- **Styling Lints**: Fixed miscellaneous Tailwind CSS v4 transition and gradient warnings.
+
+---
+
 ## [1.0.0] - 2026-01-07
 
 ### 🎉 Major Release - Text Animations Suite

@@ -1,17 +1,18 @@
 'use client';
 
 import { FadeIn } from '@/components/animations';
-import { CodeBlock, GlowButton } from '@/components/ui';
+import { CodeBlock, ShimmerButton } from '@/components/ui';
 
-export default function GlowButtonPage() {
+export default function ShimmerButtonPage() {
   return (
     <div className="space-y-16">
       <FadeIn direction="up">
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">Glow Button</h1>
+          <h1 className="text-4xl font-bold">Shimmer Button</h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            A button with a sophisticated hover-activated radiant aura.
-            Combines minimalist design with high-end lighting effects.
+            High-contrast button with a sweeping shimmer highlight.
+            Perfect for primary actions that need to stand out with a
+            premium metallic feel.
           </p>
         </div>
       </FadeIn>
@@ -24,27 +25,27 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              GlowButton uses drop-shadow layering and pseudo-elements to create
-              an internal and external glow. When hovered, the light intensity
-              increases, suggesting that the button is &quot;energizing.&quot; It&apos;s
-              designed for premium dark-mode interfaces where depth and
-              ambient lighting are key design pillars.
+              ShimmerButton uses a CSS-gradient sweep to create a &quot;light glint&quot;
+              effect. It&apos;s often used in modern SaaS marketing for the
+              primary &quot;Get Started&quot; button. The shimmer is subtle enough not
+              to be a distraction but eye-catching enough to significantly
+              increase conversion rates.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-3">
               <h3 className="font-semibold text-lg">Key Characteristics</h3>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                 <li>
-                  <strong>Radiant Hover:</strong> Aura expands and brightens on interaction
+                  <strong>Radiant Glow:</strong> Includes a soft outer glow for depth
                 </li>
                 <li>
-                  <strong>Internal Luminescence:</strong> Subtle inner glow for a 3D feel
+                  <strong>Smooth Loop:</strong> Continuous shimmer animation
                 </li>
                 <li>
-                  <strong>Customizable Glow:</strong> Control the glow color and blur radius
+                  <strong>Wait-State Friendly:</strong> Can be used with loading indicators
                 </li>
                 <li>
-                  <strong>Modern Minimal:</strong> Sharp typography paired with soft lighting
+                  <strong>Pure CSS:</strong> Uses optimized keyframe animations
                 </li>
               </ul>
             </div>
@@ -59,12 +60,12 @@ export default function GlowButtonPage() {
 
         <FadeIn direction="up" delay={0.2}>
           <div className="border border-border rounded-lg p-16 bg-card flex flex-col items-center justify-center gap-8">
-            <GlowButton className="text-[#3b82f6] border-[#3b82f6]/50 bg-[#3b82f6]/10 px-10 py-4 font-bold">
-              ENGAGE SYSTEMS
-            </GlowButton>
-            <GlowButton glowColor="#8b5cf6" className="text-[#8b5cf6] border-[#8b5cf6]/50 px-8 py-3 rounded-full text-sm font-semibold">
-              Subtle Aura
-            </GlowButton>
+            <ShimmerButton className="px-8 py-3 text-lg font-bold">
+              Upgrade Now
+            </ShimmerButton>
+            <ShimmerButton shimmerColor="#FBBF24" className="px-6 py-2 rounded-full text-sm">
+              Limited Offer
+            </ShimmerButton>
           </div>
         </FadeIn>
       </section>
@@ -93,10 +94,22 @@ export default function GlowButtonPage() {
                   <td className="border border-border p-3 text-sm text-muted-foreground">Button content</td>
                 </tr>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">glowColor</code></td>
+                  <td className="border border-border p-3"><code className="text-sm">shimmerColor</code></td>
                   <td className="border border-border p-3 text-sm"><code>string</code></td>
-                  <td className="border border-border p-3 text-sm"><code>&quot;#3b82f6&quot;</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">The color of the radiant aura</td>
+                  <td className="border border-border p-3 text-sm"><code>&quot;#ffffff&quot;</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Color of the shimmer glint</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">shimmerSize</code></td>
+                  <td className="border border-border p-3 text-sm"><code>string</code></td>
+                  <td className="border border-border p-3 text-sm"><code>&quot;0.05em&quot;</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Width of the shimmer beam</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">shimmerDuration</code></td>
+                  <td className="border border-border p-3 text-sm"><code>string</code></td>
+                  <td className="border border-border p-3 text-sm"><code>&quot;3s&quot;</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Sweep duration</td>
                 </tr>
               </tbody>
             </table>
@@ -111,16 +124,15 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              The <code>GlowButton</code> makes use of multiple <code>drop-shadow</code> and
-              <code>box-shadow</code> layers on the <code>::before</code> and
-              <code>::after</code> pseudo-elements. These layers are stacked with
-              different blur radii to create a realistic, volumetric light emission.
+              The <code>ShimmerButton</code> utilizes a clever combination of CSS masking
+              and an animated linear gradient. The shimmer glint is actually a narrow,
+              high-intensity gradient that moves across the button&apos;s surface.
             </p>
             <p>
-              When hovered, a CSS transition increases the spread and opacity of these
-              shadow layers. Because we use CSS variables for the color, the entire
-              glow (both internal and external) remains perfectly consistent and can be
-              dynamically updated.
+              By setting the <code>mask-image</code> to follow the button&apos;s border-radius,
+              we ensure the shimmer stays contained within the button. The continuous
+              loop is maintained via a simple <code>infinite</code> CSS animation,
+              leveraging GPU acceleration for a buttery-smooth 60fps experience.
             </p>
           </div>
         </FadeIn>
@@ -133,19 +145,19 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Ambience Color</h3>
+              <h3 className="font-semibold text-lg text-foreground">Shimmer Intensity</h3>
               <p className="text-sm text-muted-foreground">
-                The <code>glowColor</code> prop is the source for all light emission.
-                Vibrant, saturated colors (neons) work best as they provide enough
-                contrast for the blur layers to be visible on dark backgrounds.
+                Use the <code>shimmerColor</code> prop to control how &quot;hot&quot; the glint is.
+                A pure white (<code>#ffffff</code>) provides the most metallic look,
+                while a light version of your brand color creates a subtle, themed glint.
               </p>
             </div>
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Glow Radius</h3>
+              <h3 className="font-semibold text-lg text-foreground">Timing Patterns</h3>
               <p className="text-sm text-muted-foreground">
-                While the blur radius is currently standardized for a premium feel,
-                you can override the <code>--glow-radius</code> CSS variable in your
-                global styles to create sharper or more diffuse lighting profiles.
+                The <code>shimmerDuration</code> prop can change the button&apos;s personality.
+                Fast sweeps (1s-2s) feel high-energy and urgent, while slower sweeps (4s-6s)
+                feel high-end and ambient.
               </p>
             </div>
           </div>
@@ -166,8 +178,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Shadow Optimization</h4>
-                  <p className="text-sm text-muted-foreground">Shadow layers are limited to 3-4 levels to ensure that repaint costs remain low during hover transitions, even on mobile browsers.</p>
+                  <h4 className="font-semibold">GPU-Accelerated</h4>
+                  <p className="text-sm text-muted-foreground">The sweep effect uses <code>transform: translateX</code> and <code>opacity</code>, which are optimized by the browser to run on the GPU.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -177,8 +189,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Interactive Focus</h4>
-                  <p className="text-sm text-muted-foreground">The glow effect also triggers on keyboard focus, providing a clear visual indicator for users who navigate using a keyboard.</p>
+                  <h4 className="font-semibold">Semantic Buttons</h4>
+                  <p className="text-sm text-muted-foreground">Despite the complex internal styling, the component renders as a standard <code>&lt;button&gt;</code> element, maintaining full keyboard accessibility.</p>
                 </div>
               </div>
             </div>
@@ -193,12 +205,12 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <ul className="grid gap-4 md:grid-cols-2 list-none p-0">
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Dark Mode Pairing</h4>
-              <p className="text-sm text-muted-foreground">Glow effects rely on background contrast. Always use GlowButton on surfaces darker than <code>#333</code> (zinc-800+) for maximum impact.</p>
+              <h4 className="font-bold mb-2">Primary CTA Only</h4>
+              <p className="text-sm text-muted-foreground">Because of its high visual weight, avoid using multiple ShimmerButtons on the same screen. Reserve it for your most important call-to-action.</p>
             </li>
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Border Opacity</h4>
-              <p className="text-sm text-muted-foreground">Keep the button border partially transparent (e.g., <code>border-primary/50</code>) to let the inner glow blend seamlessly with the outer aura.</p>
+              <h4 className="font-bold mb-2">Dark Mode Sizing</h4>
+              <p className="text-sm text-muted-foreground">In dark mode, a slightly thicker <code>shimmerSize</code> can help the glint cut through the dark background more effectively.</p>
             </li>
           </ul>
         </FadeIn>
@@ -212,13 +224,13 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <CodeBlock
-              code={`import { GlowButton } from '@/components/ui';
+              code={`import { ShimmerButton } from '@/components/ui';
 
-export default function App() {
+export default function Hero() {
   return (
-    <GlowButton glowColor="#22c55e" className="text-green-500 border-green-500/50">
-      Online Now
-    </GlowButton>
+    <ShimmerButton onClick={() => alert('Clicked!')}>
+      Join the Waitlist
+    </ShimmerButton>
   );
 }`}
             />

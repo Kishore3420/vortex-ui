@@ -1,17 +1,17 @@
 'use client';
 
 import { FadeIn } from '@/components/animations';
-import { CodeBlock, GlowButton } from '@/components/ui';
+import { BorderBeamButton, CodeBlock } from '@/components/ui';
 
-export default function GlowButtonPage() {
+export default function BorderBeamPage() {
   return (
     <div className="space-y-16">
       <FadeIn direction="up">
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">Glow Button</h1>
+          <h1 className="text-4xl font-bold">Border Beam</h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            A button with a sophisticated hover-activated radiant aura.
-            Combines minimalist design with high-end lighting effects.
+            A futuristic button with a laser-like beam that travels around its border.
+            Combines sleek typography with high-energy perimeter motion.
           </p>
         </div>
       </FadeIn>
@@ -24,27 +24,27 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              GlowButton uses drop-shadow layering and pseudo-elements to create
-              an internal and external glow. When hovered, the light intensity
-              increases, suggesting that the button is &quot;energizing.&quot; It&apos;s
-              designed for premium dark-mode interfaces where depth and
-              ambient lighting are key design pillars.
+              BorderBeamButton is a sophisticated UI element that uses a
+              moving gradient to simulate a &quot;light ray&quot; orbiting the
+              button&apos;s perimeter. It&apos;s an excellent choice for AI tools,
+              developer services, or any brand that wanting to project a
+              vibe of high speed and cutting-edge technology.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-3">
               <h3 className="font-semibold text-lg">Key Characteristics</h3>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                 <li>
-                  <strong>Radiant Hover:</strong> Aura expands and brightens on interaction
+                  <strong>Laser Precision:</strong> Sharp, high-contrast beam motion
                 </li>
                 <li>
-                  <strong>Internal Luminescence:</strong> Subtle inner glow for a 3D feel
+                  <strong>Customizable Flow:</strong> Control the speed and colors of the beam
                 </li>
                 <li>
-                  <strong>Customizable Glow:</strong> Control the glow color and blur radius
+                  <strong>Perfect Corners:</strong> The beam follows the border radius perfectly
                 </li>
                 <li>
-                  <strong>Modern Minimal:</strong> Sharp typography paired with soft lighting
+                  <strong>Hover Responsive:</strong> Can be configured to react to interaction
                 </li>
               </ul>
             </div>
@@ -59,12 +59,15 @@ export default function GlowButtonPage() {
 
         <FadeIn direction="up" delay={0.2}>
           <div className="border border-border rounded-lg p-16 bg-card flex flex-col items-center justify-center gap-8">
-            <GlowButton className="text-[#3b82f6] border-[#3b82f6]/50 bg-[#3b82f6]/10 px-10 py-4 font-bold">
-              ENGAGE SYSTEMS
-            </GlowButton>
-            <GlowButton glowColor="#8b5cf6" className="text-[#8b5cf6] border-[#8b5cf6]/50 px-8 py-3 rounded-full text-sm font-semibold">
-              Subtle Aura
-            </GlowButton>
+            <BorderBeamButton className="px-10 py-4 text-white">
+              Initialize System
+            </BorderBeamButton>
+            <BorderBeamButton
+              duration={2}
+              className="px-8 py-3 rounded-full text-sm"
+            >
+              Cyber Action
+            </BorderBeamButton>
           </div>
         </FadeIn>
       </section>
@@ -93,10 +96,16 @@ export default function GlowButtonPage() {
                   <td className="border border-border p-3 text-sm text-muted-foreground">Button content</td>
                 </tr>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">glowColor</code></td>
+                  <td className="border border-border p-3"><code className="text-sm">duration</code></td>
+                  <td className="border border-border p-3 text-sm"><code>number</code></td>
+                  <td className="border border-border p-3 text-sm"><code>3</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Seconds for one full rotation</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">beamColor</code></td>
                   <td className="border border-border p-3 text-sm"><code>string</code></td>
-                  <td className="border border-border p-3 text-sm"><code>&quot;#3b82f6&quot;</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">The color of the radiant aura</td>
+                  <td className="border border-border p-3 text-sm"><code>undefined</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Color of the beam</td>
                 </tr>
               </tbody>
             </table>
@@ -111,16 +120,15 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              The <code>GlowButton</code> makes use of multiple <code>drop-shadow</code> and
-              <code>box-shadow</code> layers on the <code>::before</code> and
-              <code>::after</code> pseudo-elements. These layers are stacked with
-              different blur radii to create a realistic, volumetric light emission.
+              The <code>BorderBeamButton</code> uses a sophisticated CSS-only approach
+              leveraging <code>conic-gradients</code> and <code>border-image</code> properties.
+              The beam is essentially a high-contract gradient that orbits the button.
             </p>
             <p>
-              When hovered, a CSS transition increases the spread and opacity of these
-              shadow layers. Because we use CSS variables for the color, the entire
-              glow (both internal and external) remains perfectly consistent and can be
-              dynamically updated.
+              By applying a moving mask to the border layer, we can simulate the appearance
+              of a light ray that specifically illuminates the perimeter. The rotation
+              is achieved through a <code>@keyframes</code> animation that rotates the
+              gradient container, ensuring perfect synchronization across all four sides.
             </p>
           </div>
         </FadeIn>
@@ -133,19 +141,19 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Ambience Color</h3>
+              <h3 className="font-semibold text-lg text-foreground">Beam Dynamics</h3>
               <p className="text-sm text-muted-foreground">
-                The <code>glowColor</code> prop is the source for all light emission.
-                Vibrant, saturated colors (neons) work best as they provide enough
-                contrast for the blur layers to be visible on dark backgrounds.
+                The <code>duration</code> prop controls the velocity of the lightray.
+                Short durations (1s-2s) create an aggressive, high-energy look, while
+                longer durations (4s-6s) feel more stable and professional.
               </p>
             </div>
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Glow Radius</h3>
+              <h3 className="font-semibold text-lg text-foreground">Spectrum Control</h3>
               <p className="text-sm text-muted-foreground">
-                While the blur radius is currently standardized for a premium feel,
-                you can override the <code>--glow-radius</code> CSS variable in your
-                global styles to create sharper or more diffuse lighting profiles.
+                Use the <code>beamColor</code> prop to define the light source. You can
+                provide a single color or a custom gradient string to create
+                multi-colored &quot;rainbow&quot; laser effects.
               </p>
             </div>
           </div>
@@ -166,8 +174,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Shadow Optimization</h4>
-                  <p className="text-sm text-muted-foreground">Shadow layers are limited to 3-4 levels to ensure that repaint costs remain low during hover transitions, even on mobile browsers.</p>
+                  <h4 className="font-semibold">Pure CSS Path</h4>
+                  <p className="text-sm text-muted-foreground">The animation logic resides entirely in CSS keyframes, meaning the JavaScript main thread is completely free during the animation loop.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -177,8 +185,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Interactive Focus</h4>
-                  <p className="text-sm text-muted-foreground">The glow effect also triggers on keyboard focus, providing a clear visual indicator for users who navigate using a keyboard.</p>
+                  <h4 className="font-semibold">Focus Rings</h4>
+                  <p className="text-sm text-muted-foreground">Internal styling ensures that the animated border does not obscure the browser&apos;s native focus ring, preserving keyboard usability.</p>
                 </div>
               </div>
             </div>
@@ -193,12 +201,12 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <ul className="grid gap-4 md:grid-cols-2 list-none p-0">
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Dark Mode Pairing</h4>
-              <p className="text-sm text-muted-foreground">Glow effects rely on background contrast. Always use GlowButton on surfaces darker than <code>#333</code> (zinc-800+) for maximum impact.</p>
+              <h4 className="font-bold mb-2">Border Radius Matching</h4>
+              <p className="text-sm text-muted-foreground">Ensure the component&apos;s container has an identical border-radius to the inner beam to prevent light leaks at the corners.</p>
             </li>
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Border Opacity</h4>
-              <p className="text-sm text-muted-foreground">Keep the button border partially transparent (e.g., <code>border-primary/50</code>) to let the inner glow blend seamlessly with the outer aura.</p>
+              <h4 className="font-bold mb-2">Contextual Energy</h4>
+              <p className="text-sm text-muted-foreground">Use BorderBeam for active states like &quot;Processing...&quot; or &quot;Connecting...&quot; to provide immediate visual feedback of background tasks.</p>
             </li>
           </ul>
         </FadeIn>
@@ -212,13 +220,13 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <CodeBlock
-              code={`import { GlowButton } from '@/components/ui';
+              code={`import { BorderBeamButton } from '@/components/ui';
 
-export default function App() {
+export default function Action() {
   return (
-    <GlowButton glowColor="#22c55e" className="text-green-500 border-green-500/50">
-      Online Now
-    </GlowButton>
+    <BorderBeamButton duration={5}>
+      Confirm Details
+    </BorderBeamButton>
   );
 }`}
             />

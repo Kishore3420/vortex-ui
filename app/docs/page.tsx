@@ -67,6 +67,49 @@ export default function DocsHomePage() {
         </section>
       </FadeIn>
 
+      <FadeIn direction="up" delay={0.15}>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold">Premium Sidebar Interface</h2>
+          <div className="rounded-xl border border-border bg-card/50 overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="p-8 space-y-4 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full">
+                  New Feature
+                </div>
+                <h3 className="text-xl font-bold">Optimized for Productivity</h3>
+                <p className="text-muted-foreground">
+                  Our documentation workspace features a highly-interactive sidebar designed for speed.
+                  Use <b>Cmd + K</b> to search instantly, or collapse the sidebar for more screen space
+                  while maintaining full navigation via icon-hover popovers.
+                </p>
+                <div className="flex flex-wrap gap-4 pt-2">
+                  <div className="flex items-center gap-2 text-sm text-medium">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    Interactive Popovers
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-medium">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    Lightning Fast Search
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-medium">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    Persistent State
+                  </div>
+                </div>
+              </div>
+              <div className="bg-muted aspect-video md:aspect-auto border-l border-border flex items-center justify-center p-8 relative">
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,var(--color-primary)_0%,transparent_70%)]" />
+                <div className="relative w-full max-w-sm space-y-4 animate-in fade-in slide-in-from-right-8 duration-700">
+                  <div className="h-40 w-full rounded-lg bg-card border border-border flex items-center justify-center -rotate-2 shadow-2xl">
+                    <div className="text-xs font-mono text-muted-foreground">Interactive Preview</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
       <FadeIn direction="up" delay={0.2}>
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">Tech Stack</h2>

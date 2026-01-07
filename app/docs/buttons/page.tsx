@@ -18,9 +18,10 @@ export default function ButtonsPage() {
       <FadeIn direction="up">
         <header className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">Button Components</h1>
-          <p className="text-muted-foreground text-lg max-w-3xl">
-            6 interactive button components with premium animations and effects.
-            Perfect for CTAs, navigation, and creating engaging user interactions.
+          <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">
+            Six interactive button components designed for high-conversion CTAs and premium user journeys.
+            Each component features carefully tuned physics-based animations, 3D perspective shifts,
+            or dynamic light effects to make your primary actions unmissable.
           </p>
         </header>
       </FadeIn>

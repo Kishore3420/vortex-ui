@@ -1,17 +1,18 @@
 'use client';
 
 import { FadeIn } from '@/components/animations';
-import { CodeBlock, GlowButton } from '@/components/ui';
+import { Spotlight } from '@/components/backgrounds';
+import { CodeBlock } from '@/components/ui';
 
-export default function GlowButtonPage() {
+export default function SpotlightPage() {
   return (
     <div className="space-y-16">
       <FadeIn direction="up">
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">Glow Button</h1>
+          <h1 className="text-4xl font-bold">Spotlight</h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            A button with a sophisticated hover-activated radiant aura.
-            Combines minimalist design with high-end lighting effects.
+            Dynamic light beam that tracks the mouse. Elegant illumination
+            effect for focused content areas and modern hero sections.
           </p>
         </div>
       </FadeIn>
@@ -24,27 +25,27 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              GlowButton uses drop-shadow layering and pseudo-elements to create
-              an internal and external glow. When hovered, the light intensity
-              increases, suggesting that the button is &quot;energizing.&quot; It&apos;s
-              designed for premium dark-mode interfaces where depth and
-              ambient lighting are key design pillars.
+              Spotlight creates a visual focal point that follows the cursor.
+              It uses a radial mask and blur effects to create a soft,
+              atmospheric glow. This is particularly effective for dark mode
+              interfaces where it can reveal subtle details as the user
+              interacts with the page.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-3">
               <h3 className="font-semibold text-lg">Key Characteristics</h3>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                 <li>
-                  <strong>Radiant Hover:</strong> Aura expands and brightens on interaction
+                  <strong>Interactive Focus:</strong> Directs user attention via mouse tracking
                 </li>
                 <li>
-                  <strong>Internal Luminescence:</strong> Subtle inner glow for a 3D feel
+                  <strong>Atmospheric Glow:</strong> Soft edges and realistic light falloff
                 </li>
                 <li>
-                  <strong>Customizable Glow:</strong> Control the glow color and blur radius
+                  <strong>Configurable Intensity:</strong> Control how bright and large the beam is
                 </li>
                 <li>
-                  <strong>Modern Minimal:</strong> Sharp typography paired with soft lighting
+                  <strong>Performance Optimized:</strong> Efficient calculation of mouse coordinates
                 </li>
               </ul>
             </div>
@@ -58,13 +59,17 @@ export default function GlowButtonPage() {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.2}>
-          <div className="border border-border rounded-lg p-16 bg-card flex flex-col items-center justify-center gap-8">
-            <GlowButton className="text-[#3b82f6] border-[#3b82f6]/50 bg-[#3b82f6]/10 px-10 py-4 font-bold">
-              ENGAGE SYSTEMS
-            </GlowButton>
-            <GlowButton glowColor="#8b5cf6" className="text-[#8b5cf6] border-[#8b5cf6]/50 px-8 py-3 rounded-full text-sm font-semibold">
-              Subtle Aura
-            </GlowButton>
+          <div className="border border-border rounded-lg h-100 relative overflow-hidden bg-zinc-950">
+            <Spotlight
+              color="rgba(255, 255, 255, 0.1)"
+              className="-top-20 left-0 md:left-60 md:-top-20"
+            />
+            <div className="absolute inset-0 flex items-center justify-center p-8">
+               <div className="max-w-md text-center">
+                <h3 className="text-white text-3xl font-bold mb-4">Focus on what matters</h3>
+                <p className="text-zinc-400">Move your mouse to illuminate the dark corners of the interface.</p>
+              </div>
+            </div>
           </div>
         </FadeIn>
       </section>
@@ -87,16 +92,22 @@ export default function GlowButtonPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">children</code></td>
-                  <td className="border border-border p-3 text-sm"><code>ReactNode</code></td>
-                  <td className="border border-border p-3 text-sm"><span className="text-muted-foreground">Required</span></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Button content</td>
+                  <td className="border border-border p-3"><code className="text-sm">color</code></td>
+                  <td className="border border-border p-3 text-sm"><code>string</code></td>
+                  <td className="border border-border p-3 text-sm"><code>undefined</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Color of the spotlight beam (e.g. hsl, rgba)</td>
                 </tr>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">glowColor</code></td>
+                  <td className="border border-border p-3"><code className="text-sm">size</code></td>
+                  <td className="border border-border p-3 text-sm"><code>number</code></td>
+                  <td className="border border-border p-3 text-sm"><code>70</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Radius size in percentage</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">className</code></td>
                   <td className="border border-border p-3 text-sm"><code>string</code></td>
-                  <td className="border border-border p-3 text-sm"><code>&quot;#3b82f6&quot;</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">The color of the radiant aura</td>
+                  <td className="border border-border p-3 text-sm"><code>&quot;&quot;</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Additional CSS classes</td>
                 </tr>
               </tbody>
             </table>
@@ -111,16 +122,15 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              The <code>GlowButton</code> makes use of multiple <code>drop-shadow</code> and
-              <code>box-shadow</code> layers on the <code>::before</code> and
-              <code>::after</code> pseudo-elements. These layers are stacked with
-              different blur radii to create a realistic, volumetric light emission.
+              The <code>Spotlight</code> effect is powered by an SVG with a radial gradient
+              mask. As the user moves their mouse, the gradient&apos;s center point is
+              dynamically updated to match the cursor coordinates.
             </p>
             <p>
-              When hovered, a CSS transition increases the spread and opacity of these
-              shadow layers. Because we use CSS variables for the color, the entire
-              glow (both internal and external) remains perfectly consistent and can be
-              dynamically updated.
+              We uses a combination of <code>feGaussianBlur</code> and <code>feColorMatrix</code>
+              within the SVG filter to create the high-quality, atmospheric light falloff.
+              The animation is handled via CSS transitions for the x/y offsets to ensure
+              smooth, jitter-free movement even on lower-end devices.
             </p>
           </div>
         </FadeIn>
@@ -133,19 +143,19 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Ambience Color</h3>
+              <h3 className="font-semibold text-lg text-foreground">Light Color</h3>
               <p className="text-sm text-muted-foreground">
-                The <code>glowColor</code> prop is the source for all light emission.
-                Vibrant, saturated colors (neons) work best as they provide enough
-                contrast for the blur layers to be visible on dark backgrounds.
+                The <code>color</code> prop allows you to set the beam&apos;s hue. Using a
+                soft white or a primary brand color with low opacity (0.1 - 0.2)
+                usually yields the most premium results.
               </p>
             </div>
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Glow Radius</h3>
+              <h3 className="font-semibold text-lg text-foreground">Beam Size</h3>
               <p className="text-sm text-muted-foreground">
-                While the blur radius is currently standardized for a premium feel,
-                you can override the <code>--glow-radius</code> CSS variable in your
-                global styles to create sharper or more diffuse lighting profiles.
+                Adjust the <code>size</code> prop to control the coverage. Large sizes (80+)
+                create a subtle, room-filling ambient glow, while smaller sizes (40-60)
+                feel like a direct flashlight or searchlight.
               </p>
             </div>
           </div>
@@ -166,8 +176,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Shadow Optimization</h4>
-                  <p className="text-sm text-muted-foreground">Shadow layers are limited to 3-4 levels to ensure that repaint costs remain low during hover transitions, even on mobile browsers.</p>
+                  <h4 className="font-semibold">Event Throttling</h4>
+                  <p className="text-sm text-muted-foreground">Mouse move events are internally throttled to ensure that coordinate updates don&apos;t trigger unnecessary re-renders or performance drops.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -177,8 +187,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Interactive Focus</h4>
-                  <p className="text-sm text-muted-foreground">The glow effect also triggers on keyboard focus, providing a clear visual indicator for users who navigate using a keyboard.</p>
+                  <h4 className="font-semibold">Interactive Elements</h4>
+                  <p className="text-sm text-muted-foreground">The spotlight overlay uses <code>pointer-events: none</code> by default, ensuring that it never interferes with clicks on underlying buttons or links.</p>
                 </div>
               </div>
             </div>
@@ -193,12 +203,12 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <ul className="grid gap-4 md:grid-cols-2 list-none p-0">
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Dark Mode Pairing</h4>
-              <p className="text-sm text-muted-foreground">Glow effects rely on background contrast. Always use GlowButton on surfaces darker than <code>#333</code> (zinc-800+) for maximum impact.</p>
+              <h4 className="font-bold mb-2">Dark Backgrounds</h4>
+              <p className="text-sm text-muted-foreground">The Spotlight effect is most dramatic on <code>bg-black</code> or <code>bg-zinc-950</code>. On light backgrounds, the glow becomes much harder to see.</p>
             </li>
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Border Opacity</h4>
-              <p className="text-sm text-muted-foreground">Keep the button border partially transparent (e.g., <code>border-primary/50</code>) to let the inner glow blend seamlessly with the outer aura.</p>
+              <h4 className="font-bold mb-2">Subtle Intensity</h4>
+              <p className="text-sm text-muted-foreground">Avoid 100% opacity colors. Aim for <code>rgba(255,255,255,0.05)</code> to keep the effect elegant and prevent it from washing out your content.</p>
             </li>
           </ul>
         </FadeIn>
@@ -212,13 +222,16 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <CodeBlock
-              code={`import { GlowButton } from '@/components/ui';
+              code={`import { Spotlight } from '@/components/backgrounds';
 
-export default function App() {
+export default function FeaturedSection() {
   return (
-    <GlowButton glowColor="#22c55e" className="text-green-500 border-green-500/50">
-      Online Now
-    </GlowButton>
+    <div className="h-125 w-full bg-black relative overflow-hidden">
+      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" color="white" />
+      <div className="relative z-10 pt-20">
+        <h1 className="text-center text-white">Spotlight Effect</h1>
+      </div>
+    </div>
   );
 }`}
             />

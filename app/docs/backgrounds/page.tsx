@@ -17,9 +17,10 @@ export default function BackgroundsPage() {
       <FadeIn direction="up">
         <header className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">Background Effects</h1>
-          <p className="text-muted-foreground text-lg max-w-3xl">
-            5 immersive full-screen background animations that add depth and motion to your interfaces.
-            Perfect for hero sections, landing pages, and creating stunning visual experiences.
+          <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">
+            Five immersive, full-screen background animations engineered for depth and motion.
+            From ethereal northern lights to high-tech grid systems, these components are optimized
+            for high-performance hero sections and landing pages.
           </p>
         </header>
       </FadeIn>

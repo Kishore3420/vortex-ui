@@ -1,18 +1,18 @@
 'use client';
 
-import { FadeIn } from '@/components/animations';
-import { CodeBlock, MagneticButton } from '@/components/ui';
+import { FadeIn, Typewriter } from '@/components/animations';
+import { CodeBlock } from '@/components/ui';
 
-export default function MagneticButtonPage() {
+export default function TypewriterPage() {
   return (
     <div className="space-y-16">
       <FadeIn direction="up">
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">Magnetic Button</h1>
+          <h1 className="text-4xl font-bold">Typewriter</h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            Interactive button that attracts to the mouse cursor using spring
-            physics. Creates an engaging, playful interaction perfect for
-            call-to-action buttons and interactive elements.
+            Classic sequential text entry effect. Simulates the act of
+            typing in real-time, complete with a blinking cursor and
+            adjustable rhythm.
           </p>
         </div>
       </FadeIn>
@@ -25,26 +25,27 @@ export default function MagneticButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              MagneticButton creates a magnetic attraction effect where the
-              button smoothly follows the mouse cursor. Uses spring physics for
-              natural, bouncy motion and GPU-accelerated animations for smooth
-              60fps performance.
+              Typewriter is one of the most recognizable and engaging text
+              animations. It suggests a process of creation, discovery, or
+              communication. It&apos;s highly effective for storytelling, terminal
+              simulations, or AI-chat interfaces where you want to pace the
+              delivery of information to the user.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-3">
               <h3 className="font-semibold text-lg">Key Characteristics</h3>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                 <li>
-                  <strong>Spring physics:</strong> Natural, bouncy motion using useSpring
+                  <strong>Sequential Reveal:</strong> Predictable, character-by-character flow
                 </li>
                 <li>
-                  <strong>GPU-accelerated:</strong> Uses motion values for 60fps performance
+                  <strong>Interactive Cursor:</strong> Bypasses static feel with a &quot;living&quot; cursor
                 </li>
                 <li>
-                  <strong>Configurable strength:</strong> Control attraction amount
+                  <strong>Configurable Speed:</strong> Match the speed to your brand&apos;s &quot;typing&quot; personality
                 </li>
                 <li>
-                  <strong>Accessible:</strong> Proper ARIA attributes and disabled state
+                  <strong>Accessibility:</strong> Can be configured to show all text for screen readers
                 </li>
               </ul>
             </div>
@@ -58,13 +59,13 @@ export default function MagneticButtonPage() {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.2}>
-          <div className="border border-border rounded-lg p-16 bg-card flex items-center justify-center">
-            <MagneticButton
-              strength={0.4}
-              className="bg-primary text-primary-foreground px-10 py-5 rounded-xl font-bold text-lg shadow-xl"
-            >
-              Hover Near Me
-            </MagneticButton>
+          <div className="border border-border rounded-lg p-16 bg-zinc-950 flex flex-col items-center justify-center">
+            <Typewriter
+              text="Hello, I am Vortex AI. How can I help you today?"
+              className="text-2xl font-mono text-white"
+              speed={40}
+              cursorChar="_"
+            />
           </div>
         </FadeIn>
       </section>
@@ -87,28 +88,28 @@ export default function MagneticButtonPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">children</code></td>
-                  <td className="border border-border p-3 text-sm"><code>ReactNode</code></td>
-                  <td className="border border-border p-3 text-sm"><span className="text-muted-foreground">Required</span></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Button content</td>
-                </tr>
-                <tr>
-                  <td className="border border-border p-3"><code className="text-sm">strength</code></td>
-                  <td className="border border-border p-3 text-sm"><code>number</code></td>
-                  <td className="border border-border p-3 text-sm"><code>0.3</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Attraction strength (0.1-0.6 recommended)</td>
-                </tr>
-                <tr>
-                  <td className="border border-border p-3"><code className="text-sm">springConfig</code></td>
-                  <td className="border border-border p-3 text-sm"><code>object</code></td>
-                  <td className="border border-border p-3 text-sm"><code>{`{ stiffness: 150, damping: 15, mass: 0.1 }`}</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Spring physics configuration</td>
-                </tr>
-                <tr>
-                  <td className="border border-border p-3"><code className="text-sm">className</code></td>
+                  <td className="border border-border p-3"><code className="text-sm">text</code></td>
                   <td className="border border-border p-3 text-sm"><code>string</code></td>
-                  <td className="border border-border p-3 text-sm"><code>&quot;&quot;</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Additional CSS classes</td>
+                  <td className="border border-border p-3 text-sm"><span className="text-muted-foreground">Required</span></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Text to be typed</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">speed</code></td>
+                  <td className="border border-border p-3 text-sm"><code>number</code></td>
+                  <td className="border border-border p-3 text-sm"><code>50</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Typing interval (ms)</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">cursorChar</code></td>
+                  <td className="border border-border p-3 text-sm"><code>string</code></td>
+                  <td className="border border-border p-3 text-sm"><code>&quot;|&quot;</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Symbol for the blinking cursor</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">showCursor</code></td>
+                  <td className="border border-border p-3 text-sm"><code>boolean</code></td>
+                  <td className="border border-border p-3 text-sm"><code>true</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Whether to show the cursor</td>
                 </tr>
               </tbody>
             </table>
@@ -124,16 +125,15 @@ export default function MagneticButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <CodeBlock
-              code={`import { MagneticButton } from '@/components/ui';
+              code={`import { Typewriter } from '@/components/animations';
 
-export default function CTA() {
+export default function Intro() {
   return (
-    <MagneticButton
-      strength={0.3}
-      className="bg-primary text-white px-8 py-4 rounded-lg"
-    >
-      Get Started
-    </MagneticButton>
+    <Typewriter
+      text="Crafting the future which is fast."
+      speed={60}
+      className="text-3xl font-bold"
+    />
   );
 }`}
             />
@@ -149,13 +149,13 @@ export default function CTA() {
           <div className="space-y-4">
             <div className="bg-muted/50 rounded-lg p-6 space-y-4 text-muted-foreground">
               <p>
-                MagneticButton uses a dynamic attractor system to create its unique interactive feel:
+                Typewriter simulates a real-world typing experience through incremental state updates:
               </p>
               <ul className="space-y-2 list-disc list-inside text-sm">
-                <li><strong>Mouse Tracking:</strong> The component listens for mouse movement within a surrounding &quot;influence zone&quot; (usually larger than the button itself).</li>
-                <li><strong>Relative Positioning:</strong> It calculates the distance between the cursor and the center of the button, generating a vector that represents the pull direction.</li>
-                <li><strong>Spring Decoupling:</strong> The calculated position is fed into Framer Motion&apos;s <code>useSpring</code>. This decouples the raw mouse input from the button movement, resulting in smooth, elastic motion rather than jittery 1:1 tracking.</li>
-                <li><strong>Reset Logic:</strong> When the mouse leaves the influence area, the spring naturally pulls the button back to its origin (0,0).</li>
+                <li><strong>Incremental Slicing:</strong> The component maintains an internal index (counter). It uses <code>text.substring(0, index)</code> to render only a portion of the string at any given time.</li>
+                <li><strong>Timed Intervals:</strong> A <code>useEffect</code> hook manages a timer (via <code>setTimeout</code> or <code>setInterval</code>) that increments the index based on the <code>speed</code> prop.</li>
+                <li><strong>Cursor Simulation:</strong> The cursor is a separate element (or pseudo-element) that blinks using CSS animations and is appended to the visible string.</li>
+                <li><strong>Reset Capability:</strong> The animation can be re-triggered by changing the <code>text</code> prop or by unmounting/remounting the component.</li>
               </ul>
             </div>
           </div>
@@ -170,15 +170,15 @@ export default function CTA() {
         <FadeIn direction="up" delay={0.2}>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg">Adjusting Pull</h3>
+              <h3 className="font-semibold text-lg">Pacing and Speed</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Increase the <code>strength</code> prop (e.g., <code>0.5</code>) for a more &quot;aggressive&quot; magnetic feel. Lower values (<code>0.15</code>) provide a subtle, elegant hint of movement.
+                The <code>speed</code> prop is in milliseconds. <code>30ms</code> feels like a fast, proficient typer, while <code>100ms</code> feels slow and deliberate.
               </p>
             </div>
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg">Feel & Weight</h3>
+              <h3 className="font-semibold text-lg">Visual Identity</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                The <code>springConfig</code> allows you to define the button&apos;s physical &quot;weight&quot;. A higher <code>mass</code> makes it feel heavy and slow to attract, while higher <code>stiffness</code> makes it snappy.
+                Use <code>cursorChar</code> to match your brand style. An underscore (<code>_</code>) fits terminal themes, while a pipe (<code>|</code>) fits modern text editors.
               </p>
             </div>
           </div>
@@ -196,13 +196,13 @@ export default function CTA() {
                 <div className="space-y-2">
                   <h3 className="font-semibold text-foreground">Performance</h3>
                   <p className="text-sm">
-                    Animations are handled via Motion Values, ensuring that they don&apos;t trigger React re-renders on every mouse pixel movement. This keeps the interaction running at a fluid 60fps even on lower-end machines.
+                    Re-rendering on every character is fine for single sentences. However, for large multi-paragraph documents, consider using a faster speed or an alternative reveal to avoid excessive layout calculations.
                   </p>
                 </div>
                 <div className="space-y-2">
                   <h3 className="font-semibold text-foreground">Accessibility</h3>
                   <p className="text-sm">
-                    The component remains a standard <code>button</code> element at its core. It supports keyboard focus and click events. For users with motor impairments, the magnetic pull is purely visual and doesn&apos;t move the actual click target area.
+                    A major concern with typewriters is that screen readers may read out the text on every update. VortexUI handles this by ensuring the full text is available in the DOM in a way that remains compatible with assistive technology.
                   </p>
                 </div>
              </div>
@@ -220,18 +220,18 @@ export default function CTA() {
             <div className="border-l-4 border-primary pl-4 space-y-2">
               <h3 className="font-semibold">✅ Do</h3>
               <ul className="space-y-1 list-disc list-inside text-sm text-muted-foreground">
-                <li>Use for critical CTAs like &quot;Sign Up&quot; or &quot;Buy Now&quot;.</li>
-                <li>Ensure the button has ample whitespace around it to allow for the movement range.</li>
-                <li>Keep the button text short and legible.</li>
+                <li>Use for hero headings that need to tell a story or build suspense.</li>
+                <li>Pair with a <code>font-mono</code> font for a classic &quot;computer&quot; aesthetic.</li>
+                <li>Ensure there is enough vertical space for the text to wrap without moving other elements.</li>
               </ul>
             </div>
 
             <div className="border-l-4 border-destructive pl-4 space-y-2">
               <h3 className="font-semibold">❌ Don&apos;t</h3>
               <ul className="space-y-1 list-disc list-inside text-sm text-muted-foreground">
-                <li>Don&apos;t use for small, secondary links (it becomes frustrating).</li>
-                <li>Avoid high <code>strength</code> values that move the button so far the user &quot;chases&quot; it.</li>
-                <li>Don&apos;t use inside scrollable areas where it might interfere with drag-to-scroll.</li>
+                <li>Don&apos;t use for information that needs to be read instantly.</li>
+                <li>Avoid using with extremely long sentences that take more than 5 seconds to complete.</li>
+                <li>Don&apos;t forget to set a fixed height on the container if the text wraps frequently.</li>
               </ul>
             </div>
           </div>

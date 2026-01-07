@@ -130,21 +130,20 @@ Comprehensive documentation is available in the `/docs` folder:
 - React 19+
 - Tailwind CSS v4
 
-## What's New in v1.0
+## What's New in v1.1
 
-🎉 **Major Release** - Text Animations Suite
+🎉 **Documentation & UX Launch**
 
-- 19 premium text animation components
-- Organized component architecture (6 categorized directories)
-- Comprehensive documentation site
-- Premium showcase pages
-- 19 detailed tutorials
+- **Premium Sidebar Interface**: A highly-interactive, collapsible documentation workspace with `Cmd+K` search and popover navigation.
+- **Full Documentation Suite**: Standardized "How It Works" and "Customization" guides for all 36 components.
+- **Performance Optimized**: Smoother transitions and resolved scrolling conflicts.
+- **Improved Overviews**: Redesigned category landing pages for Text, Backgrounds, and Buttons.
 
 See [CHANGELOG.md](./CHANGELOG.md) for full details.
 
 ## Project Status
 
-🚀 **v1.0 Released** - The library now includes 36 production-ready components. Check the [roadmap](./docs/project/roadmap.md) for upcoming features.
+🚀 **v1.1 Released** - The library now includes 36 production-ready components. Check the [roadmap](./docs/project/roadmap.md) for upcoming features.
 
 ## License
 

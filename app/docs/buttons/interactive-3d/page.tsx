@@ -1,17 +1,18 @@
 'use client';
 
 import { FadeIn } from '@/components/animations';
-import { CodeBlock, GlowButton } from '@/components/ui';
+import { CodeBlock, Interactive3DButton } from '@/components/ui';
 
-export default function GlowButtonPage() {
+export default function Interactive3DPage() {
   return (
     <div className="space-y-16">
       <FadeIn direction="up">
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">Glow Button</h1>
+          <h1 className="text-4xl font-bold">Interactive 3D</h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            A button with a sophisticated hover-activated radiant aura.
-            Combines minimalist design with high-end lighting effects.
+            Tactile, physical-feel button with 3D depth. Responds to mouse
+            movement with perspective shifting and depresses on click
+            like a physical switch.
           </p>
         </div>
       </FadeIn>
@@ -24,27 +25,27 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              GlowButton uses drop-shadow layering and pseudo-elements to create
-              an internal and external glow. When hovered, the light intensity
-              increases, suggesting that the button is &quot;energizing.&quot; It&apos;s
-              designed for premium dark-mode interfaces where depth and
-              ambient lighting are key design pillars.
+              Interactive 3D Button brings skeuomorphism into the modern era.
+              Using dynamic shadow layering and transform-perspective, it
+              simulates a physical object that tilts toward the cursor.
+              The click interaction features a &quot;push-down&quot; state that provides
+              unparalleled tactile satisfaction in a purely digital interface.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-3">
               <h3 className="font-semibold text-lg">Key Characteristics</h3>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                 <li>
-                  <strong>Radiant Hover:</strong> Aura expands and brightens on interaction
+                  <strong>3D Perspective:</strong> Real-time tilting based on mouse position
                 </li>
                 <li>
-                  <strong>Internal Luminescence:</strong> Subtle inner glow for a 3D feel
+                  <strong>Tactile Click:</strong> Physical &quot;depth&quot; change on press
                 </li>
                 <li>
-                  <strong>Customizable Glow:</strong> Control the glow color and blur radius
+                  <strong>Dynamic Shadows:</strong> Shadows shift to maintain consistent lighting
                 </li>
                 <li>
-                  <strong>Modern Minimal:</strong> Sharp typography paired with soft lighting
+                  <strong>Premium Feel:</strong> Adds a sense of quality and craftsmanship to the UI
                 </li>
               </ul>
             </div>
@@ -58,13 +59,13 @@ export default function GlowButtonPage() {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.2}>
-          <div className="border border-border rounded-lg p-16 bg-card flex flex-col items-center justify-center gap-8">
-            <GlowButton className="text-[#3b82f6] border-[#3b82f6]/50 bg-[#3b82f6]/10 px-10 py-4 font-bold">
-              ENGAGE SYSTEMS
-            </GlowButton>
-            <GlowButton glowColor="#8b5cf6" className="text-[#8b5cf6] border-[#8b5cf6]/50 px-8 py-3 rounded-full text-sm font-semibold">
-              Subtle Aura
-            </GlowButton>
+          <div className="border border-border rounded-lg p-20 bg-card flex flex-col items-center justify-center gap-12">
+            <Interactive3DButton className="bg-primary text-primary-foreground font-bold px-12 py-5 rounded-2xl text-xl shadow-2xl">
+              Push to Execute
+            </Interactive3DButton>
+            <Interactive3DButton className="bg-white text-black border-2 border-zinc-200 px-8 py-3 rounded-lg font-semibold">
+              Skeuomorphic Toggle
+            </Interactive3DButton>
           </div>
         </FadeIn>
       </section>
@@ -93,10 +94,16 @@ export default function GlowButtonPage() {
                   <td className="border border-border p-3 text-sm text-muted-foreground">Button content</td>
                 </tr>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">glowColor</code></td>
+                  <td className="border border-border p-3"><code className="text-sm">depth</code></td>
+                  <td className="border border-border p-3 text-sm"><code>number</code></td>
+                  <td className="border border-border p-3 text-sm"><code>4</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Physical depth of the button (px)</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">className</code></td>
                   <td className="border border-border p-3 text-sm"><code>string</code></td>
-                  <td className="border border-border p-3 text-sm"><code>&quot;#3b82f6&quot;</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">The color of the radiant aura</td>
+                  <td className="border border-border p-3 text-sm"><code>&quot;&quot;</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Additional CSS classes</td>
                 </tr>
               </tbody>
             </table>
@@ -111,16 +118,17 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              The <code>GlowButton</code> makes use of multiple <code>drop-shadow</code> and
-              <code>box-shadow</code> layers on the <code>::before</code> and
-              <code>::after</code> pseudo-elements. These layers are stacked with
-              different blur radii to create a realistic, volumetric light emission.
+              The 3D effect is achieved using CSS <code>transform: perspective()</code>
+              and <code>rotateX/rotateY</code>. As the mouse moves, the component
+              calculates the distance from the center and applies a proportional
+              rotation to the button face.
             </p>
             <p>
-              When hovered, a CSS transition increases the spread and opacity of these
-              shadow layers. Because we use CSS variables for the color, the entire
-              glow (both internal and external) remains perfectly consistent and can be
-              dynamically updated.
+              The &quot;physical depth&quot; is actually a stack of multiple
+              box-shadows or a layered 3D transform that translates the button base
+              along the Z-axis. When clicked, we transition the <code>translateY</code>
+              property to match the <code>depth</code> prop, simulating the compression
+              of a physical spring.
             </p>
           </div>
         </FadeIn>
@@ -133,19 +141,19 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Ambience Color</h3>
+              <h3 className="font-semibold text-lg text-foreground">Physical Depth</h3>
               <p className="text-sm text-muted-foreground">
-                The <code>glowColor</code> prop is the source for all light emission.
-                Vibrant, saturated colors (neons) work best as they provide enough
-                contrast for the blur layers to be visible on dark backgrounds.
+                The <code>depth</code> prop (in pixels) defines how thick the button
+                slab is. Recommended values for a premium feel are 4-8px. Extreme values
+                (12px+) can be used for a playful, toy-like aesthetic.
               </p>
             </div>
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg text-foreground">Glow Radius</h3>
+              <h3 className="font-semibold text-lg text-foreground">Shadow Presence</h3>
               <p className="text-sm text-muted-foreground">
-                While the blur radius is currently standardized for a premium feel,
-                you can override the <code>--glow-radius</code> CSS variable in your
-                global styles to create sharper or more diffuse lighting profiles.
+                The button face and base use independent shadow variables. You can
+                control the ambient occlusion and drop shadows by wrapping the
+                component in a div with custom shadow utility classes.
               </p>
             </div>
           </div>
@@ -166,8 +174,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Shadow Optimization</h4>
-                  <p className="text-sm text-muted-foreground">Shadow layers are limited to 3-4 levels to ensure that repaint costs remain low during hover transitions, even on mobile browsers.</p>
+                  <h4 className="font-semibold">Transformed Geometry</h4>
+                  <p className="text-sm text-muted-foreground">Perspective calculations are performed on every mouse frame but are limited to the specific button instance, keeping layout shifts localized.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -177,8 +185,8 @@ export default function GlowButtonPage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Interactive Focus</h4>
-                  <p className="text-sm text-muted-foreground">The glow effect also triggers on keyboard focus, providing a clear visual indicator for users who navigate using a keyboard.</p>
+                  <h4 className="font-semibold">Semantic Click</h4>
+                  <p className="text-sm text-muted-foreground">While the visual depth changes, the button&apos;s hit area remains consistent to prevent &quot;missed clicks&quot; during the animation transition.</p>
                 </div>
               </div>
             </div>
@@ -193,12 +201,12 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <ul className="grid gap-4 md:grid-cols-2 list-none p-0">
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Dark Mode Pairing</h4>
-              <p className="text-sm text-muted-foreground">Glow effects rely on background contrast. Always use GlowButton on surfaces darker than <code>#333</code> (zinc-800+) for maximum impact.</p>
+              <h4 className="font-bold mb-2">Border Radius</h4>
+              <p className="text-sm text-muted-foreground">High border-radius values (e.g., <code>rounded-2xl</code>) look best with 3D buttons as they evoke the feel of rounded physical hardware buttons or keys.</p>
             </li>
             <li className="bg-card border border-border p-5 rounded-lg">
-              <h4 className="font-bold mb-2">Border Opacity</h4>
-              <p className="text-sm text-muted-foreground">Keep the button border partially transparent (e.g., <code>border-primary/50</code>) to let the inner glow blend seamlessly with the outer aura.</p>
+              <h4 className="font-bold mb-2">Typography Weight</h4>
+              <p className="text-sm text-muted-foreground">Use <code>font-bold</code> or <code>font-black</code> labels. Thin text can get slightly distorted or blurry when the 3D perspective tilt is at its maximum angle.</p>
             </li>
           </ul>
         </FadeIn>
@@ -212,13 +220,16 @@ export default function GlowButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <CodeBlock
-              code={`import { GlowButton } from '@/components/ui';
+              code={`import { Interactive3DButton } from '@/components/ui';
 
-export default function App() {
+export default function GameUI() {
   return (
-    <GlowButton glowColor="#22c55e" className="text-green-500 border-green-500/50">
-      Online Now
-    </GlowButton>
+    <Interactive3DButton
+      depth={8}
+      className="bg-green-500 text-white font-black px-12 py-6 rounded-3xl"
+    >
+      START GAME
+    </Interactive3DButton>
   );
 }`}
             />

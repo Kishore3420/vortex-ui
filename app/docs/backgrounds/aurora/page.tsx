@@ -1,18 +1,19 @@
 'use client';
 
 import { FadeIn } from '@/components/animations';
-import { CodeBlock, MagneticButton } from '@/components/ui';
+import { Aurora } from '@/components/backgrounds';
+import { CodeBlock } from '@/components/ui';
 
-export default function MagneticButtonPage() {
+export default function AuroraPage() {
   return (
     <div className="space-y-16">
       <FadeIn direction="up">
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">Magnetic Button</h1>
+          <h1 className="text-4xl font-bold">Aurora</h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            Interactive button that attracts to the mouse cursor using spring
-            physics. Creates an engaging, playful interaction perfect for
-            call-to-action buttons and interactive elements.
+            Fluid, northern-lights inspired background effect. Creates a
+            dreamy, ethereal atmosphere with shifting gradients and
+            soft motion.
           </p>
         </div>
       </FadeIn>
@@ -25,26 +26,27 @@ export default function MagneticButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              MagneticButton creates a magnetic attraction effect where the
-              button smoothly follows the mouse cursor. Uses spring physics for
-              natural, bouncy motion and GPU-accelerated animations for smooth
-              60fps performance.
+              Aurora is a high-performance background component that uses
+              layered gradient animations to simulate the natural flow of the
+              aurora borealis. It&apos;s designed to be used as a backdrop for
+              hero sections, logins, or dashboard landing pages where a
+              calm but dynamic energy is desired.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-3">
               <h3 className="font-semibold text-lg">Key Characteristics</h3>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                 <li>
-                  <strong>Spring physics:</strong> Natural, bouncy motion using useSpring
+                  <strong>Smooth Transitions:</strong> Infinite, fluid gradient loops
                 </li>
                 <li>
-                  <strong>GPU-accelerated:</strong> Uses motion values for 60fps performance
+                  <strong>Custom Color Palettes:</strong> Configure the primary, secondary, and accent colors
                 </li>
                 <li>
-                  <strong>Configurable strength:</strong> Control attraction amount
+                  <strong>Layered Depth:</strong> Uses multiple blurry elements for a soft, 3D feel
                 </li>
                 <li>
-                  <strong>Accessible:</strong> Proper ARIA attributes and disabled state
+                  <strong>GPU Accelerated:</strong> Uses transform-based animations for 60fps performance
                 </li>
               </ul>
             </div>
@@ -58,13 +60,11 @@ export default function MagneticButtonPage() {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.2}>
-          <div className="border border-border rounded-lg p-16 bg-card flex items-center justify-center">
-            <MagneticButton
-              strength={0.4}
-              className="bg-primary text-primary-foreground px-10 py-5 rounded-xl font-bold text-lg shadow-xl"
-            >
-              Hover Near Me
-            </MagneticButton>
+          <div className="border border-border rounded-lg h-100 relative overflow-hidden bg-zinc-950">
+            <Aurora className="opacity-50" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <h2 className="text-white text-4xl font-bold z-10">Ethereal Beauty</h2>
+            </div>
           </div>
         </FadeIn>
       </section>
@@ -87,28 +87,16 @@ export default function MagneticButtonPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-border p-3"><code className="text-sm">children</code></td>
-                  <td className="border border-border p-3 text-sm"><code>ReactNode</code></td>
-                  <td className="border border-border p-3 text-sm"><span className="text-muted-foreground">Required</span></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Button content</td>
-                </tr>
-                <tr>
-                  <td className="border border-border p-3"><code className="text-sm">strength</code></td>
-                  <td className="border border-border p-3 text-sm"><code>number</code></td>
-                  <td className="border border-border p-3 text-sm"><code>0.3</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Attraction strength (0.1-0.6 recommended)</td>
-                </tr>
-                <tr>
-                  <td className="border border-border p-3"><code className="text-sm">springConfig</code></td>
-                  <td className="border border-border p-3 text-sm"><code>object</code></td>
-                  <td className="border border-border p-3 text-sm"><code>{`{ stiffness: 150, damping: 15, mass: 0.1 }`}</code></td>
-                  <td className="border border-border p-3 text-sm text-muted-foreground">Spring physics configuration</td>
-                </tr>
-                <tr>
                   <td className="border border-border p-3"><code className="text-sm">className</code></td>
                   <td className="border border-border p-3 text-sm"><code>string</code></td>
                   <td className="border border-border p-3 text-sm"><code>&quot;&quot;</code></td>
                   <td className="border border-border p-3 text-sm text-muted-foreground">Additional CSS classes</td>
+                </tr>
+                <tr>
+                  <td className="border border-border p-3"><code className="text-sm">showRadialGradient</code></td>
+                  <td className="border border-border p-3 text-sm"><code>boolean</code></td>
+                  <td className="border border-border p-3 text-sm"><code>true</code></td>
+                  <td className="border border-border p-3 text-sm text-muted-foreground">Adds an overlay radial gradient</td>
                 </tr>
               </tbody>
             </table>
@@ -124,16 +112,16 @@ export default function MagneticButtonPage() {
         <FadeIn direction="up" delay={0.2}>
           <div className="space-y-4">
             <CodeBlock
-              code={`import { MagneticButton } from '@/components/ui';
+              code={`import { Aurora } from '@/components/backgrounds';
 
-export default function CTA() {
+export default function Layout({ children }) {
   return (
-    <MagneticButton
-      strength={0.3}
-      className="bg-primary text-white px-8 py-4 rounded-lg"
-    >
-      Get Started
-    </MagneticButton>
+    <div className="relative min-h-screen overflow-hidden">
+      <Aurora className="opacity-30" />
+      <main className="relative z-10">
+        {children}
+      </main>
+    </div>
   );
 }`}
             />
@@ -149,13 +137,13 @@ export default function CTA() {
           <div className="space-y-4">
             <div className="bg-muted/50 rounded-lg p-6 space-y-4 text-muted-foreground">
               <p>
-                MagneticButton uses a dynamic attractor system to create its unique interactive feel:
+                Aurora achieves its dreamy aesthetic through a combination of CSS techniques:
               </p>
               <ul className="space-y-2 list-disc list-inside text-sm">
-                <li><strong>Mouse Tracking:</strong> The component listens for mouse movement within a surrounding &quot;influence zone&quot; (usually larger than the button itself).</li>
-                <li><strong>Relative Positioning:</strong> It calculates the distance between the cursor and the center of the button, generating a vector that represents the pull direction.</li>
-                <li><strong>Spring Decoupling:</strong> The calculated position is fed into Framer Motion&apos;s <code>useSpring</code>. This decouples the raw mouse input from the button movement, resulting in smooth, elastic motion rather than jittery 1:1 tracking.</li>
-                <li><strong>Reset Logic:</strong> When the mouse leaves the influence area, the spring naturally pulls the button back to its origin (0,0).</li>
+                <li><strong>Glow Layers:</strong> Uses three distinct <code>div</code> layers with massive blur radii (typically 50px+) to create soft, bleeding edges between colors.</li>
+                <li><strong>Keyframe Loops:</strong> Each layer follows a unique, infinite <code>@keyframes</code> path that moves the element in a non-linear fashion, preventing the pattern from feeling repetitive.</li>
+                <li><strong>Radial Masking:</strong> An optional radial gradient overlay (<code>showRadialGradient</code>) helps &quot;anchor&quot; the center of the viewport, making text content more readable while keeping the edges dynamic.</li>
+                <li><strong>GPU Composition:</strong> By animating <code>transform</code> (translate/rotate) instead of properties like <code>background-position</code>, the browser handles the animation on the GPU, maintaining a solid 60fps.</li>
               </ul>
             </div>
           </div>
@@ -170,15 +158,15 @@ export default function CTA() {
         <FadeIn direction="up" delay={0.2}>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg">Adjusting Pull</h3>
+              <h3 className="font-semibold text-lg">Contrast Control</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Increase the <code>strength</code> prop (e.g., <code>0.5</code>) for a more &quot;aggressive&quot; magnetic feel. Lower values (<code>0.15</code>) provide a subtle, elegant hint of movement.
+                If your Aurora effect is too bright for light text, wrap it in a container with <code>bg-black</code> and set the component to <code>opacity-50</code>. This deepens the colors while preserving the motion.
               </p>
             </div>
             <div className="space-y-3">
-              <h3 className="font-semibold text-lg">Feel & Weight</h3>
+              <h3 className="font-semibold text-lg">Positioning</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                The <code>springConfig</code> allows you to define the button&apos;s physical &quot;weight&quot;. A higher <code>mass</code> makes it feel heavy and slow to attract, while higher <code>stiffness</code> makes it snappy.
+                By default, Aurora fills its relative container. Use <code>-z-10</code> on the component and <code>relative</code> on your content to ensure proper layering.
               </p>
             </div>
           </div>
@@ -196,13 +184,15 @@ export default function CTA() {
                 <div className="space-y-2">
                   <h3 className="font-semibold text-foreground">Performance</h3>
                   <p className="text-sm">
-                    Animations are handled via Motion Values, ensuring that they don&apos;t trigger React re-renders on every mouse pixel movement. This keeps the interaction running at a fluid 60fps even on lower-end machines.
+                    High blur filters can be computationally expensive on older mobile hardware.
+                    Monitor your frame rates on mid-range devices; if you notice drops, reducing the component&apos;s opacity or size can help alleviate pixel-fill pressure.
                   </p>
                 </div>
                 <div className="space-y-2">
                   <h3 className="font-semibold text-foreground">Accessibility</h3>
                   <p className="text-sm">
-                    The component remains a standard <code>button</code> element at its core. It supports keyboard focus and click events. For users with motor impairments, the magnetic pull is purely visual and doesn&apos;t move the actual click target area.
+                    Aurora does not contain flashing lights or rapid color shifts, making it safe for users with vestibular disorders.
+                    However, ensure your foreground text maintains a 4.5:1 contrast ratio against the shifting background colors.
                   </p>
                 </div>
              </div>
@@ -220,18 +210,18 @@ export default function CTA() {
             <div className="border-l-4 border-primary pl-4 space-y-2">
               <h3 className="font-semibold">✅ Do</h3>
               <ul className="space-y-1 list-disc list-inside text-sm text-muted-foreground">
-                <li>Use for critical CTAs like &quot;Sign Up&quot; or &quot;Buy Now&quot;.</li>
-                <li>Ensure the button has ample whitespace around it to allow for the movement range.</li>
-                <li>Keep the button text short and legible.</li>
+                <li>Use for full-viewport hero sections and landing pages.</li>
+                <li>Pick high-contrast colors (e.g., Violet and Emerald) for a true &quot;borealis&quot; look.</li>
+                <li>Stick to dark backgrounds (<code>bg-black</code> or <code>bg-zinc-950</code>) for a premium feel.</li>
               </ul>
             </div>
 
             <div className="border-l-4 border-destructive pl-4 space-y-2">
               <h3 className="font-semibold">❌ Don&apos;t</h3>
               <ul className="space-y-1 list-disc list-inside text-sm text-muted-foreground">
-                <li>Don&apos;t use for small, secondary links (it becomes frustrating).</li>
-                <li>Avoid high <code>strength</code> values that move the button so far the user &quot;chases&quot; it.</li>
-                <li>Don&apos;t use inside scrollable areas where it might interfere with drag-to-scroll.</li>
+                <li>Don&apos;t use at 100% opacity (it will overpower your UI).</li>
+                <li>Avoid using with too many other overlapping animations (e.g., heavy particles).</li>
+                <li>Don&apos;t use as a background for complex data tables or small text areas.</li>
               </ul>
             </div>
           </div>
