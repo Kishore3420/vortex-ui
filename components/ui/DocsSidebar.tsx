@@ -21,80 +21,77 @@ const sections = [
       { href: '/docs/animations/rotate-in', label: 'Rotate In' },
       { href: '/docs/animations/blur-in', label: 'Blur In' },
       { href: '/docs/animations/flip-in', label: 'Flip In' },
+      { href: '/docs/animations/slide-up-text', label: 'Slide Up Text' },
     ],
   },
   {
-    label: 'Staggered Animations',
+    label: 'Stagger & Sequencing',
     items: [
       { href: '/docs/animations/stagger', label: 'Stagger Container' },
       { href: '/docs/animations/stagger-item', label: 'Stagger Item' },
-      { href: '/docs/animations/diagonal-stagger', label: 'Diagonal Stagger' },
     ],
   },
   {
     label: 'Text Animations',
     items: [
-      { href: '/docs/animations/text-reveal', label: 'Text Reveal' },
-      { href: '/docs/animations/character-reveal', label: 'Character Reveal' },
-      { href: '/docs/animations/slide-up-text', label: 'Slide Up Text' },
-      { href: '/docs/animations/typewriter', label: 'Typewriter' },
-    ],
-  },
-  {
-    label: 'Buttons',
-    items: [
-      { href: '/docs/buttons/magnetic-button', label: 'Magnetic Button' },
-      { href: '/docs/buttons/ripple-button', label: 'Ripple Button' },
-      { href: '/docs/buttons/glow-button', label: 'Glow Button' },
+      { href: '/docs/text', label: 'Overview' },
+      { href: '/docs/text/text-reveal', label: 'Text Reveal' },
+      { href: '/docs/text/character-reveal', label: 'Character Reveal' },
+      { href: '/docs/text/typewriter', label: 'Typewriter' },
+      { href: '/docs/text/blur-reveal', label: 'Blur Reveal' },
+      { href: '/docs/text/scramble-reveal', label: 'Scramble Reveal' },
+      { href: '/docs/text/box-reveal', label: 'Box Reveal' },
+      { href: '/docs/text/gradual-spacing', label: 'Gradual Spacing' },
+      { href: '/docs/text/word-pull-up', label: 'Word Pull Up' },
+      { href: '/docs/text/letter-pull-up', label: 'Letter Pull Up' },
+      { href: '/docs/text/wavy-text', label: 'Wavy Text' },
+      { href: '/docs/text/rotating-text', label: 'Rotating Text' },
+      { href: '/docs/text/shimmer-text', label: 'Shimmer Text' },
+      { href: '/docs/text/rolling-text', label: 'Rolling Text' },
+      { href: '/docs/text/elastic-reveal', label: 'Elastic Reveal' },
+      { href: '/docs/text/sparkle-reveal', label: 'Sparkle Reveal' },
+      { href: '/docs/text/glitch-text', label: 'Glitch Text' },
+      { href: '/docs/text/link-reveal', label: 'Link Reveal' },
+      { href: '/docs/text/text-mask', label: 'Text Mask' },
     ],
   },
   {
     label: 'Background Effects',
     items: [
-      { href: '/docs/animations/gradients', label: 'Animated Gradients' },
-      { href: '/docs/animations/mesh-gradient', label: 'Mesh Gradients' },
-      { href: '/docs/animations/spotlight', label: 'Spotlight Effects' },
-      { href: '/docs/animations/floating-orbs', label: 'Floating Orbs' },
+      { href: '/docs/backgrounds', label: 'Overview' },
+      { href: '/docs/backgrounds/aurora', label: 'Aurora' },
+      { href: '/docs/backgrounds/grid-beams', label: 'Grid Beams' },
+      { href: '/docs/backgrounds/mesh-gradient', label: 'Mesh Gradient' },
+      { href: '/docs/backgrounds/shooting-stars', label: 'Shooting Stars' },
+      { href: '/docs/backgrounds/spotlight', label: 'Spotlight' },
     ],
   },
   {
-    label: 'Combinations',
+    label: 'Button Components',
     items: [
-      {
-        href: '/docs/combinations/multiple-entrance',
-        label: 'Multiple Entrance',
-      },
-      {
-        href: '/docs/combinations/entrance-stagger',
-        label: 'Entrance + Stagger',
-      },
-      {
-        href: '/docs/combinations/background-content',
-        label: 'Background + Content',
-      },
-      { href: '/docs/combinations/library-mix', label: 'Library Combinations' },
-      { href: '/docs/combinations/examples', label: 'Real-World Examples' },
+      { href: '/docs/buttons', label: 'Overview' },
+      { href: '/docs/buttons/shimmer-button', label: 'Shimmer Button' },
+      { href: '/docs/buttons/border-beam', label: 'Border Beam Button' },
+      { href: '/docs/buttons/ripple-button', label: 'Ripple Button' },
+      { href: '/docs/buttons/magnetic-button', label: 'Magnetic Button' },
+      { href: '/docs/buttons/glow-button', label: 'Glow Button' },
+      { href: '/docs/buttons/interactive-3d', label: 'Interactive 3D Button' },
     ],
   },
   {
-    label: 'Techniques & Concepts',
+    label: 'Techniques',
     items: [
-      { href: '/docs/techniques/viewport-margins', label: 'Viewport Margins' },
+      { href: '/docs/techniques/viewport-margins', label: 'Viewport Control' },
       { href: '/docs/techniques/easing', label: 'Easing Functions' },
       { href: '/docs/techniques/performance', label: 'Performance Tips' },
     ],
   },
   {
-    label: 'Learning Resources',
-    items: [
-      { href: '/docs/experiments', label: 'Experiments' },
-      { href: '/docs/examples', label: 'Examples' },
-      { href: '/docs/landing-pages', label: 'Landing Pages' },
-    ],
-  },
-  {
     label: 'Reference',
-    items: [{ href: '/docs/roadmap', label: 'Roadmap' }],
+    items: [
+      { href: '/docs/roadmap', label: 'Roadmap' },
+      { href: '/docs/examples', label: 'Examples' },
+    ],
   },
 ];
 
@@ -135,7 +132,7 @@ export function DocsSidebar() {
           <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
             VortexUI
           </span>
-          <p className="text-lg font-semibold">Animation Docs</p>
+          <p className="text-lg font-semibold">Documentation</p>
         </Link>
       </div>
 
