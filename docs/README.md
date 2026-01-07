@@ -1,68 +1,62 @@
-# VortexUI Documentation
+# Vortex UI Documentation
 
-Welcome to the comprehensive documentation for VortexUI - a modern, production-ready animation library for React and Next.js applications.
+Welcome to the Vortex UI documentation. This library provides premium animation components for Next.js 16 and React 19.
 
-## 📚 Documentation Structure
+## Quick Links
 
 ### Getting Started
+Start here if you're new to Vortex UI:
+- [Introduction](getting-started/introduction.md) - What is Vortex UI?
+- [Installation](getting-started/installation.md) - Setup and configuration
+- [Quick Start](getting-started/quick-start.md) - Build your first animation
+- [Project Structure](getting-started/project-structure.md) - Understanding the codebase
 
-- [Introduction](./01-introduction.md) - Overview and philosophy
-- [Getting Started](./02-getting-started.md) - Installation and setup
-- [Quick Start Guide](./03-quick-start.md) - Your first animation
+### Tutorials
+Comprehensive guides for all components:
+- [**Animations**](tutorials/animations/README.md) - 7 core animation tutorials
+- [**Text Effects**](tutorials/text/README.md) - 19 typography animations
+- [**Backgrounds**](tutorials/backgrounds/README.md) - 5 immersive effects
+- [**Buttons**](tutorials/buttons/README.md) - 6 interactive components
 
-### Core Concepts
+### Guides & Templates
+- [Library Comparison](guides/library-comparison.md) - How Vortex UI compares
+- [Component Template](guides/component-template.md) - Create new components
+- [Animation Page Template](guides/animation-page-template.md) - Showcase pages
 
-- [Animation Basics](./04-animation-basics.md) - Understanding animations
-- [Easing Functions](./05-easing-functions.md) - Motion feels and timing
-- [Viewport Animations](./06-viewport-animations.md) - Scroll-triggered animations
-- [Performance](./07-performance.md) - Optimization best practices
+### Project Information
+- [Roadmap](project/roadmap.md) - Future plans and features
+- [Changelog](project/changelog.md) - Version history
+- [Cleanup Report](project/cleanup-report.md) - Code organization
 
-### Component Library
+## Component Categories
 
-- [Framer Motion Components](./components/framer-motion.md) - Framer Motion animations
-- [GSAP Components](./components/gsap.md) - GSAP animations
-- [Three.js Components](./components/three-js.md) - 3D animations
-- [Combined Animations](./components/combinations.md) - Multi-library animations
+### Core Animations (7)
+Basic building blocks: FadeIn, ScaleIn, RotateIn, FlipIn, BlurIn, StaggerContainer, StaggerItem
 
-### Examples & Showcases
+### Text Effects (19)
+- **Basic** (4): TextReveal, CharacterReveal, SlideUpText, Typewriter
+- **Reveals** (6): BlurReveal, ScrambleReveal, BoxReveal, GradualSpacing, ElasticReveal, SparkleReveal
+- **Physics** (3): WordPullUp, LetterPullUp, WavyText
+- **Dynamic** (3): RotatingText, ShimmerText, RollingText
+- **Advanced** (3): GlitchText, LinkReveal, TextMask
 
-- [Animation Examples](./examples/README.md) - Code examples
-- [Landing Pages](./landing-pages/README.md) - 5 showcase landing pages
+### Backgrounds (5)
+Aurora, Grid Beams, Mesh Gradient, Shooting Stars, Spotlight
 
-### API Reference
+### Buttons (6)
+Shimmer, Border Beam, Ripple, Magnetic, Glow, Interactive 3D
 
-- [Component API](./api/README.md) - Complete API documentation
-- [Type Definitions](./api/types.md) - TypeScript types
+## Live Showcase
 
-### Contributing
+Visit `/test` in your development environment to see all components in action with interactive examples.
 
-- [Contributing Guide](./contributing.md) - How to contribute
-- [Code Standards](./code-standards.md) - Development guidelines
+## Tech Stack
 
-## 🎯 Project Goals
+- **Framework**: Next.js 16, React 19
+- **Styling**: Tailwind CSS v4
+- **Animation**: Framer Motion, GSAP, Three.js
+- **TypeScript**: Full type safety
 
-This library aims to be the **definitive resource** for modern web animations, providing:
+## Contributing
 
-1. **Comprehensive Coverage** - All major animation libraries (Framer Motion, GSAP, Three.js)
-2. **Production Ready** - Optimized, accessible, and performant
-3. **Developer Friendly** - Clear documentation, TypeScript support, examples
-4. **Modern Stack** - Built for React 19+ and Next.js 16+
-5. **Best Practices** - Accessibility, performance, and UX considerations
-
-## 🚀 Quick Links
-
-- [Project Roadmap](./00-roadmap.md) - Development plan
-- [Library Structure](./00-structure.md) - Project organization
-- [Changelog](./CHANGELOG.md) - Version history
-
-## 📖 How to Use This Documentation
-
-1. **New to animations?** Start with [Introduction](./01-introduction.md) and [Animation Basics](./04-animation-basics.md)
-2. **Ready to code?** Jump to [Getting Started](./02-getting-started.md)
-3. **Looking for examples?** Check [Animation Examples](./examples/README.md)
-4. **Building a landing page?** See [Landing Pages](./landing-pages/README.md)
-
----
-
-**Version:** 0.1.0
-**Last Updated:** 2025-01-27
+This is an active project. Check the [roadmap](project/roadmap.md) for planned features and contribution opportunities.

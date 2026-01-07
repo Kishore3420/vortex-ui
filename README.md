@@ -1,149 +1,97 @@
-# VortexUI
+# Vortex UI
 
-A comprehensive, production-ready animation library for modern React and Next.js applications. Built with Framer Motion, GSAP, and Three.js, featuring a professional Pantone-based color system.
+A premium animation component library for Next.js and React, built with modern web technologies for creating stunning, performant user interfaces.
 
-## 🚀 Quick Start
+## Overview
 
-**Prerequisites:** This project uses [Bun](https://bun.sh). Install Bun if you haven't already.
+Vortex UI provides a collection of carefully crafted animation components designed for modern web applications. Built with performance and developer experience in mind, each component is fully customizable and production-ready.
+
+## Tech Stack
+
+- **Framework**: Next.js 16, React 19
+- **Styling**: Tailwind CSS v4
+- **Animation**: Framer Motion, GSAP, Three.js
+- **TypeScript**: Full type safety throughout
+
+## Available Components
+
+### Background Effects
+
+Immersive full-screen background animations:
+- **Aurora** - Ethereal Northern Lights gradient effect
+- **Grid Beams** - High-tech structural grid with animated light beams
+- **Mesh Gradient** - Dynamic blob-based gradient animation
+- **Shooting Stars** - Whimsical meteor shower effect
+- **Spotlight** - Interactive cursor spotlight effect
+
+### Button Components
+
+Interactive button variants with premium animations:
+- **Shimmer Button** - Glossy shimmer effect
+- **Border Beam Button** - Animated border beam
+- **Ripple Button** - Material-inspired ripple effect
+- **Magnetic Button** - Magnetic cursor attraction
+- **Glow Button** - Glowing hover effect
+- **Interactive 3D Button** - 3D perspective tilt
+
+## Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/vortex-ui.git
+
 # Install dependencies
 bun install
 
-# Run development server
-bun run dev
+# Start development server
+bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the result.
+## Quick Start
 
-## 📚 Documentation
+```tsx
+import { Aurora } from '@/components/backgrounds';
+import { ShimmerButton } from '@/components/ui';
 
-Comprehensive documentation is available at `/docs`:
-
-- **[Documentation Home](./app/docs)** - Overview and getting started
-- **[Getting Started](./app/docs/getting-started)** - Installation and setup
-- **[Quick Start](./app/docs/quick-start)** - Your first animation
-- **[Roadmap](./app/docs/roadmap)** - Development plan and phases
-- **[Component Library](./app/docs/components)** - All animation components
-
-## ✨ Features
-
-- 🎨 **Multi-Library Support** - Framer Motion, GSAP, Three.js
-- 🎯 **Production Ready** - Optimized, accessible, performant
-- 🎨 **Professional Design** - Pantone-based color system
-- 📱 **Modern Stack** - React 19, Next.js 16, TypeScript 5
-- 📖 **Comprehensive Docs** - Detailed guides and examples
-- ♿ **Accessible** - Respects `prefers-reduced-motion`
-- ⚡ **Performance** - 60fps target, GPU-accelerated
-- 📝 **Text Animations** - Word/character reveals, typewriter effects
-- 🎯 **Interactive Buttons** - Magnetic, ripple, and glow effects
-- 📚 **14 Tutorials** - Comprehensive learning guides for all components
-
-## 🏗️ Project Structure
-
-```
-├── components/
-│   ├── animations/     # Animation components
-│   ├── providers/      # Context providers
-│   └── sections/       # Page sections
-├── lib/
-│   ├── animations/     # Animation utilities
-│   ├── hooks/          # Custom hooks
-│   └── theme.ts        # Pantone colors
-├── docs/               # Documentation
-└── app/                # Next.js app
+export default function HeroSection() {
+  return (
+    <div className="relative min-h-screen">
+      <Aurora className="absolute inset-0" />
+      <div className="relative z-10 flex items-center justify-center min-h-screen">
+        <h1 className="text-6xl font-bold mb-8">Welcome</h1>
+        <ShimmerButton>Get Started</ShimmerButton>
+      </div>
+    </div>
+  );
+}
 ```
 
-## 🎯 Current Status
+## Documentation
 
-**Phase 1: Foundation** ✅
+Comprehensive documentation is available in the `/docs` folder:
+- **Getting Started** - Installation and setup guides
+- **Component Guides** - Detailed API documentation
+- **Project Information** - Roadmap and changelog
 
-- Basic Framer Motion components
-- Theme system
-- Smooth scrolling
-- Documentation structure
+## Requirements
 
-**Phase 2: Framer Motion Expansion** ✅
+- Node.js 18+ or Bun
+- Next.js 16+
+- React 19+
+- Tailwind CSS v4
 
-- Text animation components (TextReveal, CharacterReveal, SlideUpText, Typewriter)
-- Interactive button components (MagneticButton, RippleButton, GlowButton)
-- Comprehensive tutorials (14 detailed guides)
-- Performance optimizations
-- Theme system integration
+## Project Status
 
-**Phase 3: Advanced Features** 🚧
+🚧 **Active Development** - This library is under active development. Additional animation components and features are being added regularly. Check the [roadmap](./docs/project/roadmap.md) for upcoming features.
 
-- GSAP integration
-- Three.js integration
-- Parallax effects
-- Page transitions
+## License
 
-See [Roadmap](./docs/00-roadmap.md) for full development plan.
+[Add your license here]
 
-## 📦 Components
+## Contributing
 
-### Animation Components (11)
-
-- **Basic:** FadeIn, ScaleIn, RotateIn, BlurIn, FlipIn
-- **Stagger:** StaggerContainer, StaggerItem
-- **Text:** TextReveal, CharacterReveal, SlideUpText, Typewriter
-
-### Button Components (3)
-
-- **MagneticButton** - Mouse-attracted buttons with spring physics
-- **RippleButton** - Material Design-inspired ripple effect
-- **GlowButton** - Hover glow animations
-
-### UI Components (3)
-
-- CodeBlock, DocsSidebar, ThemeToggle
-
-## 📚 Tutorials
-
-Comprehensive tutorials available in `docs/tutorials/`:
-
-**Text Animations:**
-
-- [TextReveal Tutorial](./docs/tutorials/text-reveal-tutorial.md)
-- [CharacterReveal Tutorial](./docs/tutorials/character-reveal-tutorial.md)
-- [SlideUpText Tutorial](./docs/tutorials/slide-up-text-tutorial.md)
-- [Typewriter Tutorial](./docs/tutorials/typewriter-tutorial.md)
-
-**Button Components:**
-
-- [MagneticButton Tutorial](./docs/tutorials/magnetic-button-tutorial.md)
-- [RippleButton Tutorial](./docs/tutorials/ripple-button-tutorial.md)
-- [GlowButton Tutorial](./docs/tutorials/glow-button-tutorial.md)
-
-**Basic Animations:**
-
-- [FadeIn Tutorial](./docs/tutorials/fade-in-tutorial.md)
-- [ScaleIn Tutorial](./docs/tutorials/scale-in-tutorial.md)
-- [RotateIn Tutorial](./docs/tutorials/rotate-in-tutorial.md)
-- [BlurIn Tutorial](./docs/tutorials/blur-in-tutorial.md)
-- [FlipIn Tutorial](./docs/tutorials/flip-in-tutorial.md)
-
-**Stagger Animations:**
-
-- [StaggerContainer Tutorial](./docs/tutorials/stagger-container-tutorial.md)
-- [StaggerItem Tutorial](./docs/tutorials/stagger-item-tutorial.md)
-
-## 📖 Learn More
-
-- [Documentation](./docs/README.md) - Complete documentation
-- [Examples](./docs/examples/README.md) - Code examples
-- [Component Library](./docs/components/README.md) - All components
-- [Best Practices](./docs/07-performance.md) - Performance guide
-- [Changelog](./docs/CHANGELOG.md) - Version history
-
-## 🤝 Contributing
-
-Contributions are welcome! See [Contributing Guide](./CONTRIBUTING.md) for details.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+Contributions are welcome! Please check the documentation for guidelines.
 
 ---
 
-**Built with:** Next.js 16, React 19, TypeScript, Framer Motion, GSAP, Three.js
+Built with ❤️ using Next.js 16, React 19, and Tailwind CSS v4
