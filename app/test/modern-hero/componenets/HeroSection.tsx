@@ -35,31 +35,34 @@ export default function HeroSection({
         />
       )}
 
-      <ChairmanTitle
-        show={animationState.showElements}
-        imageUrl={chairmanImageUrl}
-      />
+      <div className="relative top-10 left-auto right-auto">
+        <ChairmanTitle
+          show={animationState.showElements}
+          imageUrl={chairmanImageUrl}
+        />
 
-      <BusinessmanImage
-        show={animationState.showElements}
-        imageUrl={businessmanImageUrl}
-      />
+        <BusinessmanImage
+          show={animationState.showElements}
+          imageUrl={businessmanImageUrl}
+        />
 
-      <FounderLabel
-        show={animationState.showElements}
-        text={HERO_CONFIG.role}
-      />
+        <FounderLabel
+          show={animationState.showElements}
+          text={HERO_CONFIG.role}
+        />
 
-      {animationState.showElements && (
-        <div className="absolute top-56 md:top-64 right-8 md:right-12 max-w-xs md:max-w-md z-10">
-          <RotatingContent
-            content={ROTATING_CONTENT}
-            duration={3.5}
-            transitionDuration={0.6}
-            className="w-full"
-          />
-        </div>
-      )}
+        {animationState.showElements && (
+          <div className="absolute top-56 md:top-64 right-8 md:right-12 max-w-xs md:max-w-md z-10">
+            <RotatingContent
+              content={ROTATING_CONTENT}
+              duration={3.5}
+              transitionDuration={0.6}
+              className="w-full"
+            />
+          </div>
+        )}  
+      </div>
+
 
       <CompanyInfo
         show={animationState.showElements}
