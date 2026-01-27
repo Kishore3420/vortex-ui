@@ -26,7 +26,6 @@ export const TypewriterName = ({
       }, speed);
       return () => clearTimeout(timer);
     } else if (currentIndex === name.length && !isComplete) {
-      // Use setTimeout to move setState outside of the effect execution
       const completeTimer = setTimeout(() => {
         setIsComplete(true);
         onComplete();
@@ -50,9 +49,9 @@ export const TypewriterName = ({
           opacity: 1,
           ...(isComplete
             ? {
-                left: '3rem',
+                left: '0',
                 top: 'auto',
-                bottom: '8rem',
+                bottom: '6rem',
                 x: 0,
                 y: 0,
               }
@@ -68,7 +67,7 @@ export const TypewriterName = ({
         }}
         className="absolute z-20"
       >
-        <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-red-600 whitespace-nowrap">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-600 whitespace-nowrap">
           {displayedText}
         </h2>
       </motion.div>

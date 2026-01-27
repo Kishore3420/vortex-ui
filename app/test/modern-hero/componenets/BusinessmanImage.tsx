@@ -16,7 +16,7 @@ export const BusinessmanImage = ({ show, imageUrl }: BusinessmanImageProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.6 }}
-      className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-80 md:w-96 h-125 md:h-150 z-15"
+      className="w-64 h-100 sm:w-80 sm:h-125 md:w-96 md:h-150"
     >
       {imageUrl ? (
         <Image

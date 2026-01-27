@@ -16,12 +16,12 @@ export const ChairmanTitle = ({ show, imageUrl }: ChairmanTitleProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.3 }}
-      className="absolute top-8 md:top-12 left-1/2 transform -translate-x-1/2 z-10 text-center"
+      className="w-full"
     >
       {imageUrl ? (
-        <Image src={imageUrl} alt="Chairman" className="w-full max-w-5xl" />
+        <Image src={imageUrl} alt="Chairman" className="w-full" />
       ) : (
-        <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-black text-red-600 tracking-tight leading-none">
+        <h1 className="text-[clamp(3rem,10vw,14rem)] md:text-[clamp(4rem,12vw,14rem)] font-black text-red-600 tracking-tight leading-none text-center md:text-center">
           CHAIRMAN
         </h1>
       )}
